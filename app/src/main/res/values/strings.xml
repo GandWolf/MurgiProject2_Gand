@@ -5,4 +5,14 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="matricula_titulo">Matriculación en IES Murgi</string>
+
+    <string name = "doc">Rellenar la matrícula y presentarla en el centro (enlace más abajo).</string>
+    <string name = "doc2">Adjuntar dos fotos recientes junto a la matrícula.</string>
+
+    <string name = "doc3">Abonar el seguro escolar (en el mismo centro) con una cantidad de 2,61€.</string>
+    <string name = "doc4">Hacerte socio del AMPA (opcional).</string>
+
+
+
 </resources>
