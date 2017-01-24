@@ -5,4 +5,20 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="matricula_titulo">Matriculación en IES Murgi</string>
+
+    <string name = "doc1">Rellenar la matrícula y presentarla en el centro (enlace más abajo).</string>
+    <string name = "doc2">Adjuntar dos fotos recientes junto a la matrícula.</string>
+
+    <string name = "doc3">Abonar el seguro escolar (en el mismo centro) con una cantidad de 1,12€.</string>
+    <string name = "doc4">ff</string>
+
+    <string name="link"><a href="http://todofp.es//todofp/legislacion/ordenacion-fp.pdf?documentId=0901e72b80df2cba">Enlace a normativa CF Grado Medio</a></string>
+    <string name="link2"><a href="http://todofp.es//todofp/legislacion/ordenacion-fp.pdf?documentId=0901e72b80df2cba">Enlace a normativa CF Grado Superior</a></string>
+    <string name="link3"><a href="http://todofp.es//todofp/legislacion/ordenacion-fp.pdf?documentId=0901e72b80df2cba">Enlace a matrícula.</a></string>
+
+
+
+
+
 </resources>
