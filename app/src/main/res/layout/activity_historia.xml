@@ -21,7 +21,7 @@
         android:id="@+id/texto_cabecera"
         android:layout_width="240dp"
         android:layout_height="34dp"
-        android:text="Historia del IES Murgi"
+        android:text="@string/historia_cabecera"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginEnd="16dp"
@@ -30,5 +30,11 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="8dp"
         app:layout_constraintLeft_toRightOf="@+id/img_cabecera" />
+
+    <TextView
+        android:id="@+id/cabecera_descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
 
 </android.support.constraint.ConstraintLayout>
