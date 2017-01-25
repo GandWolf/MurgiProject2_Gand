@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/loog_murgi"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="16dp"
         app:layout_constraintLeft_toLeftOf="parent" />
@@ -22,19 +22,40 @@
         android:layout_width="240dp"
         android:layout_height="34dp"
         android:text="@string/historia_cabecera"
+        android:textColor="@color/colorTitulo"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="128dp"
         android:layout_marginTop="52dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="8dp"
-        app:layout_constraintLeft_toRightOf="@+id/img_cabecera" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/cabecera_descripcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        />
+        android:text="@string/historia_cabecera_descripcion"
+        android:textColor="@color/colorSubtitulo"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="186dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="152dp"
+        android:layout_height="34dp"
+        android:text="@string/historia_cabecera_descripcion"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="186dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="152dp"
+        android:layout_height="34dp"
+        android:text="@string/historia_cabecera_descripcion"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="186dp" />
 
 </android.support.constraint.ConstraintLayout>
