@@ -14,19 +14,29 @@
 
     <string name="matricula_titulo">Matriculación en IES Murgi</string>
 
-    <string name = "doc1">Rellenar la matrícula y presentarla en el centro (enlace más abajo).</string>
-    <string name = "doc2">Adjuntar dos fotos recientes junto a la matrícula.</string>
 
-    <string name = "doc3">Abonar el seguro escolar (en el mismo centro) con una cantidad de 1,12€.</string>
-    <string name = "doc4">ff</string>
-
-    <string name="link"><a href="http://todofp.es//todofp/legislacion/ordenacion-fp.pdf?documentId=0901e72b80df2cba">Enlace a normativa CF Grado Medio</a></string>
-    <string name="link2"><a href="http://todofp.es//todofp/legislacion/ordenacion-fp.pdf?documentId=0901e72b80df2cba">Enlace a normativa CF Grado Superior</a></string>
-    <string name="link3"><a href="http://todofp.es//todofp/legislacion/ordenacion-fp.pdf?documentId=0901e72b80df2cba">Enlace a matrícula.</a></string>
 
     <string name="infoAndalucia"><a href="http://www.juntadeandalucia.es/temas/estudiar/fp/matriculacion.html">Más info</a></string>
 
+    <string name="fpBasicaTitulo">Ciclos de Formación Profesional Básica</string>
+    <string name="fpbasica1">Se puede presentar una única solicitud en la que se relaciona por orden de preferencia los centros docentes y los perfiles de Formación Profesional Básica que se desee, debiendo cumplir con los siguientes requisitos:</string>
+    <string name="fpbasica2">Tener 15 años cumplidos, o cumplirlos durante el año natural en curso, y no superar los 17 años de edad en el momento del acceso o durante el año natural en curso </string>
+    <string name="fpbsica3">Haber cursado el primer ciclo de la ESO o, excepcionalmente, haber cursado el segundo curso de la ESO </string>
+    <string name="fpbsica4">Haber sido propuesto por el equipo docente a los padres, madres o tutores legales para la incorporación a un ciclo de Formación Profesional Básica</string>
 
 
+    <string name="fpmedioTitulo">Ciclos Formativos de Grado Medio</string>
+    <string name="fpmedio1">Para acceder a los Ciclos Formativos de Grado Medio será necesario reunir alguno de los requisitos académicos siguientes:</string>
+    <string name="fpmedio2">Tener el Título de Educación Secundaria Obligatoria (LOE) o Tener el Título de Graduado en Educación Secundaria Obligatoria (LOGSE)</string>
+    <string name="fpmedio3">Estar en posesión del Título de Técnico (ciclos formativos de Grado Medio) </string>
+    <string name="fpmedio4">Si no cumplo ninguno de estos requisitos, puedo presentarme a las pruebas de acceso que se convocan todos los años, normalmente en junio y puede que también en septiembre. Para ello, debo cumplir 17 años en el año en que me presente a dicha prueba.</string>
+
+    <string name="fpsuperiorTitulo">Ciclos Formativos de Grado Superior</string>
+    <string name="fpsuperio1">Para acceder a los Ciclos Formativos de Grado Superior será necesario reunir alguno de los requisitos académicos siguientes:</string>
+    <string name="fpsuperio2">Estar en posesión del título de Bachiller </string>
+    <string name="fpsuperio3">Estar en posesión de un título de Técnico Superior o Técnico Especialista </string>
+    <string name="fpsuperio4">Haber superado el curso de orientación universitaria (COU) o preuniversitario (PREU) </string>
+    <string name="fpsuperio5">Haber obtenido una titulación universitaria o equivalente</string>
+    <string name="fpsuperio6">Si no cumples alguno de estos requisitos puedes presentarte a una prueba de acceso que se convoca todos los años, normalmente en junio o también puede que en septiembre. Para ello, debes haber cumplido los 19 años en el año en que te quieras presentar a dicha prueba o bien 18 años si tienes previamente un título de Técnico relacionado con el que deseas cursar.</string>
 
 </resources>
