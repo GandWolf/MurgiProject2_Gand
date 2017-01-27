@@ -12,9 +12,8 @@ public class Matriculacion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_matriculacion);
 
-        TextView link = (TextView)findViewById(R.id.link1);
-        TextView link2 = (TextView)findViewById(R.id.link3);
-        link.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView link2 = (TextView)findViewById(R.id.tv_info);
         link2.setMovementMethod(LinkMovementMethod.getInstance());
     }
 }
