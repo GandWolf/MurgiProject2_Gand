@@ -8,9 +8,9 @@
 
     <string name="historia_cabecera">Historia del IES Murgi</string>
     <string name="historia_cabecera_descripcion">Descripción</string>
-    <string name="historia_texto_descripcion">El IES Murgi abierto a la docencia desde el siglo XX lleva dando clase tanto a docentes de la ESO, Barchiller y FP.</string>
+    <string name="historia_texto_descripcion">El IES Murgi abierto a la docencia desde el siglo XX lleva dando clase tanto a docentes de la ESO, Bachillerato y FP.</string>
     <string name="historia_cabecera_localizacion">Donde estamos</string>
-    <string name="historia_texto_localizacion">Av. Príncipes de España, 17, 04700 El Ejido, Almería </string>
+    <string name="historia_texto_localizacion">Av. Príncipes de España, 17, 04700 El Ejido, Almería. </string>
 
     <string name="matricula_titulo">Matriculación en IES Murgi</string>
 
