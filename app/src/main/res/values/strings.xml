@@ -35,6 +35,7 @@
     <string name="fpsuperio4">Haber superado el curso de orientación universitaria (COU) o preuniversitario (PREU). </string>
     <string name="fpsuperio5">Haber obtenido una titulación universitaria o equivalente.</string>
     <string name="fpsuperio6">Si no cumples alguno de estos requisitos puedes presentarte a una prueba de acceso que se convoca todos los años, normalmente en junio o también puede que en septiembre.</string>
+    <string name="requisitos_para_acceder">Requisitos para acceder:</string>
 
 
 </resources>
