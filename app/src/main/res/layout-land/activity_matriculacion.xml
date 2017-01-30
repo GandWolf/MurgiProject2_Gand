@@ -419,7 +419,7 @@
 </LinearLayout>
 
     <TextView
-        android:id="@+id/tv_info"
+        android:id="@+id/tv_infoMatriculas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

@@ -13,7 +13,7 @@ public class Matriculacion extends AppCompatActivity {
         setContentView(R.layout.activity_matriculacion);
 
 
-        TextView link2 = (TextView)findViewById(R.id.tv_info);
+        TextView link2 = (TextView)findViewById(R.id.tv_infoMatriculas);
         link2.setMovementMethod(LinkMovementMethod.getInstance());
     }
 }
