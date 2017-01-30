@@ -12,7 +12,7 @@
 
 
     <TextView
-        android:text="Requisitos para acceder:"
+        android:text="@string/requisitos_para_acceder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView7"
@@ -165,9 +165,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView20"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:textSize="20sp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
+
         />
 
     <LinearLayout
@@ -273,9 +274,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView25"
         android:textSize="20sp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
 
  />
     <LinearLayout
