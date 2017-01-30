@@ -262,7 +262,7 @@
         android:textSize="20sp"
          />
     </LinearLayout>
-</LinearLayout>
+
 
     <TextView
         android:text="@string/fpsuperiorTitulo"
@@ -428,7 +428,7 @@
 
     </LinearLayout>
 
-
+    </LinearLayout>
     <TextView
         android:text="@string/infoAndalucia"
         android:layout_width="wrap_content"
