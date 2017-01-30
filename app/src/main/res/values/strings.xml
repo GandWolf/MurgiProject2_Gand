@@ -12,14 +12,11 @@
     <string name="historia_cabecera_localizacion">Donde estamos</string>
     <string name="historia_texto_localizacion">Av. Príncipes de España, 17, 04700 El Ejido, Almería. </string>
 
-    <string name="matricula_titulo">Matriculación en IES Murgi</string>
-
-
 
     <string name="infoAndalucia"><a href="http://www.juntadeandalucia.es/temas/estudiar/fp/matriculacion.html">Más info</a></string>
 
     <string name="fpBasicaTitulo">Ciclos de Formación Profesional Básica</string>
-    <string name="fpbasica1">Se puede presentar una única solicitud en la que se relaciona por orden de preferencia los centros docentes y los perfiles de Formación Profesional Básica que se desee, debiendo cumplir con los siguientes requisitos:</string>
+    <string name="fpbasica1">Para acceder a los Ciclos Formativos de formacion básica será necesario reunir alguno de los requisitos académicos siguientes:</string>
     <string name="fpbasica2">Tener 15 años cumplidos, o cumplirlos durante el año natural en curso, y no superar los 17 años de edad en el momento del acceso o durante el año natural en curso. </string>
     <string name="fpbsica3">Haber cursado el primer ciclo de la ESO o, excepcionalmente, haber cursado el segundo curso de la ESO. </string>
     <string name="fpbsica4">Haber sido propuesto por el equipo docente a los padres, madres o tutores legales para la incorporación a un ciclo de Formación Profesional Básica.</string>
