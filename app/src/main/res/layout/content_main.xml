@@ -30,6 +30,7 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/boton_ies_murgi"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -38,14 +39,16 @@
             android:baselineAlignBottom="true" />
 
         <ImageButton
+            android:id="@+id/boton_contacto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/colorPrimary"
             android:src="@drawable/ic_menu_slideshow"
-            android:id="@+id/imageButton" />
+            />
 
         <ImageButton
+            android:id="@+id/boton_matriculacion"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -60,6 +63,7 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/boton_mapa"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -67,14 +71,16 @@
             android:src="@drawable/ic_menu_slideshow" />
 
         <ImageButton
+            android:id="@+id/boton_cursos"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/colorPrimary"
             android:src="@drawable/ic_menu_slideshow"
-            android:id="@+id/imageButton2" />
+            />
 
         <ImageButton
+            android:id="@+id/boton_cita"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"

@@ -13,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -22,6 +24,14 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        ImageButton murgi = (ImageButton)findViewById(R.id.boton_ies_murgi);
+        ImageButton contacto = (ImageButton)findViewById(R.id.boton_contacto);
+        ImageButton matriculacion = (ImageButton)findViewById(R.id.boton_matriculacion);
+        ImageButton mapa= (ImageButton)findViewById(R.id.boton_mapa);
+        ImageButton curso= (ImageButton)findViewById(R.id.boton_cursos);
+        ImageButton cita= (ImageButton)findViewById(R.id.boton_cita);
+
         setSupportActionBar(toolbar);
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -34,55 +44,55 @@ public class MainActivity extends AppCompatActivity
         });*/
 
 
+        //Temporal
 
-//        btn_contacto.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getBaseContext(), Contacto.class);
-//                startActivity(intent);
-//            }
-//        });
-//
-//        btn_map.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(v.getContext(), MapsActivity.class);
-//                startActivity(intent);
-//
-//            }
-//        });
-//
-//        //btn info
-//        btn_inf.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getBaseContext(), Informacion.class);
-//                startActivity(intent);
-//            }
-//        });
-//
-//        btn_informatica.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getBaseContext(), CardView.class);
-//                startActivity(intent);
-//            }
-//        });
-//
-//
-//
-//        btn_normativa.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getBaseContext(), Normativa.class);
-//                startActivity(intent);
-//            }
-//        });
+        murgi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               Intent intent = new Intent(getBaseContext(), Historia.class);
+               startActivity(intent);
+            }
+        });
 
+        contacto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), Contacto.class);
+                startActivity(intent);
+            }
+        });
 
+        matriculacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), Matriculacion.class);
+                startActivity(intent);
+            }
+        });
 
+        mapa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), MapsActivity.class);
+                startActivity(intent);
+            }
+        });
 
+/*        curso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), Curso.class);
+                startActivity(intent);
+            }
+        });
 
+        cita.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), Cita.class);
+                startActivity(intent);
+            }
+        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
