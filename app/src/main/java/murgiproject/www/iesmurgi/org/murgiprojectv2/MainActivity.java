@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity
 
         setSupportActionBar(toolbar);
 
-        startActivity(new Intent(MainActivity.this,Matriculacion.class));
+        startActivity(new Intent(MainActivity.this,Historia.class));
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
