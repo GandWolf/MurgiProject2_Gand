@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity
         mapa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), MapsActivity.class);
+                Intent intent = new Intent(getBaseContext(), MapsActivity2.class);
                 startActivity(intent);
             }
         });
