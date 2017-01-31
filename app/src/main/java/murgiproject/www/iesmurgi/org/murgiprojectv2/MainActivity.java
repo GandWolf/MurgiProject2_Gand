@@ -18,7 +18,7 @@ import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+///asasasasasasasasdasdasdasdasdasdasdasdasdasasasasdasdasdasdqeqweqweqwe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity
 
         setSupportActionBar(toolbar);
 
-        startActivity(new Intent(MainActivity.this,Historia.class));
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +46,37 @@ public class MainActivity extends AppCompatActivity
 
         //Temporal
 
+        murgi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               Intent intent = new Intent(getBaseContext(), Historia.class);
+               startActivity(intent);
+            }
+        });
+
+        contacto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), Contacto.class);
+                startActivity(intent);
+            }
+        });
+
+        matriculacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), Matriculacion.class);
+                startActivity(intent);
+            }
+        });
+
+        mapa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), MapsActivity.class);
+                startActivity(intent);
+            }
+        });
 
 /*        curso.setOnClickListener(new View.OnClickListener() {
             @Override
