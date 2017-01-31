@@ -1,5 +1,6 @@
 package murgiproject.www.iesmurgi.org.murgiprojectv2;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,7 +9,7 @@ import android.widget.ImageButton;
 public class VerCursos extends AppCompatActivity {
 
     ImageButton btn_bachiller, btn_fpBasica, btn_fpMedio, btn_fpSuperior, btn_eoIdiomas;
-
+    int pos=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,12 @@ public class VerCursos extends AppCompatActivity {
         btn_bachiller.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                pos=1;
+                Intent i = new Intent(VerCursos.this, MainActivity.class);
+                Bundle b = new Bundle();
+                b.putInt("pos", pos);
+                i.putExtras(b);
+                startActivity(i);
             }
         });
 
