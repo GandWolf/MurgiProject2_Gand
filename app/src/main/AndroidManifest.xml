@@ -19,11 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Contacto"> </activity>
-        <activity android:name=".Matriculacion"> </activity>
-        <activity android:name=".MapsActivity"> </activity>
-        <activity android:name=".Historia"> </activity>
-
+        <activity android:name=".Contacto"></activity>
+        <activity android:name=".Matriculacion"></activity>
+        <activity android:name=".MapsActivity"></activity>
+        <activity android:name=".Historia"></activity>
+        <activity android:name=".VerCursos"></activity>
     </application>
 
 </manifest>
