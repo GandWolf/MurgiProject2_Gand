@@ -78,14 +78,14 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-/*        curso.setOnClickListener(new View.OnClickListener() {
+     curso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), Curso.class);
+                Intent intent = new Intent(getBaseContext(), VerCursos.class);
                 startActivity(intent);
             }
         });
-
+/*
         cita.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
