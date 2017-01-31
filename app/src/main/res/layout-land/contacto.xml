@@ -197,7 +197,7 @@
     <ImageView
         android:layout_width="25dp"
         android:layout_height="28dp"
-        android:src="@drawable/desarrolladores"
+        android:src="@drawable/usuarios"
         android:id="@+id/imageView6"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="32dp"
