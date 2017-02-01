@@ -5,4 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorTitulo">#000000</color>
     <color name="colorSubtitulo">#FF4081</color>
+    <color name="blanco">#fff</color>
+    <color name="negro">#000</color>
+
 </resources>
