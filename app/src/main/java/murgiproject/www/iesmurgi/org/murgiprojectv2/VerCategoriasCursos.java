@@ -62,6 +62,7 @@ public class VerCategoriasCursos extends AppCompatActivity {
 
 
     }
+    //intent que le pasa la posicion a la clase ver cursos
     public void startActivity(int pos){
         Intent i = new Intent(VerCategoriasCursos.this, VerCursos.class);
         Bundle b = new Bundle();
