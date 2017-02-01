@@ -33,7 +33,7 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/fp_basica"
+        android:src="@drawable/sele_fpbasica"
         android:id="@+id/btn_irFpBasico"
         android:layout_marginBottom="80dp"
         android:scaleType="centerInside"
@@ -47,7 +47,7 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/fp_medio"
+        android:src="@drawable/sele_fpmedio"
         android:id="@+id/btn_irGradoMedio"
         android:layout_marginBottom="80dp"
         android:scaleType="centerInside"
@@ -60,7 +60,7 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/fp_superior"
+        android:src="@drawable/sele_fpsuperior"
         android:id="@+id/btn_irGradoSuperior"
         android:layout_marginBottom="80dp"
         android:scaleType="centerInside"
@@ -72,7 +72,7 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/escuela_idiomas"
+        android:src="@drawable/sele_escuelaidiomas"
         android:id="@+id/btn_irEscuelaIdiomas"
         android:layout_marginBottom="16dp"
         android:scaleType="centerInside"
