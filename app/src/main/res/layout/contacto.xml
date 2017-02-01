@@ -1,276 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
-    android:scrollbars="vertical"
-    >
-
+    android:layout_width="match_parent"
+    android:orientation="vertical">
 
     <ImageView
-        android:layout_width="157dp"
-        android:layout_height="0dp"
-        android:id="@+id/img_logo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
         android:src="@drawable/loog_murgi"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="26dp"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="26dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ies Murgi"
-        android:textSize="40dp"
-        android:id="@+id/txt_murgi"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        android:layout_marginEnd="13dp"
-        app:layout_constraintRight_toRightOf="@+id/img_logo"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
-
-
-    <ImageView
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:elevation="8dp"
-        android:src="@drawable/ic_telefono"
-        android:id="@+id/imageView2"
-        app:layout_constraintRight_toLeftOf="@+id/img_logo"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/textView15"
-        android:layout_marginStart="44dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginTop="110dp"
-        app:layout_constraintTop_toBottomOf="@+id/img_logo"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="109dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contacto: "
-        android:textSize="20dp"
-        android:id="@+id/textView8"
-        app:layout_constraintRight_toLeftOf="@+id/textView9"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="3dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="+34 950481000"
-        android:textSize="20dp"
-        android:id="@+id/textView9"
-        android:layout_marginStart="27dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView8"
-        tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/textView11" />
-
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="25dp"
-        android:src="@drawable/ic_fax"
-        android:id="@+id/imageView3"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/textView12"
-        android:layout_marginStart="2dp"
-        app:layout_constraintRight_toRightOf="@+id/imageView6"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="18dp"
-        app:layout_constraintLeft_toLeftOf="@+id/imageView2" />
+        />
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fax:"
-        android:textSize="20dp"
-        android:id="@+id/textView10"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/textView12"
-        android:layout_marginStart="6dp"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="18dp"
-        app:layout_constraintLeft_toLeftOf="@+id/textView12" />
+        android:layout_gravity="center"
+        android:orientation="horizontal">
 
-    <TextView
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logo_murgi"
+            android:textSize="40sp"
+            android:id="@+id/txt_murgi"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="950323232"
-        android:textSize="20dp"
-        android:id="@+id/textView11"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/textView14"
-        android:layout_marginEnd="30dp"
-        app:layout_constraintRight_toRightOf="@+id/textView14"
-        android:layout_marginBottom="18dp" />
-
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="25dp"
-        android:src="@drawable/web"
-        android:id="@+id/imageView4"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-        android:layout_marginEnd="1dp"
-        app:layout_constraintRight_toRightOf="@+id/imageView3"
-        android:layout_marginTop="89dp"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="89dp"
-        app:layout_constraintLeft_toLeftOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/textView8" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="web:"
-        android:textSize="20dp"
-        android:id="@+id/textView12"
-        app:layout_constraintRight_toLeftOf="@+id/textView14"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/textView13"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="16dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="www.iesmurgi.org"
-        android:linksClickable="true"
-        android:autoLink="web"
-        android:textSize="20dp"
-        android:id="@+id/textView14"
-        tools:layout_constraintRight_creator="1"
-        android:layout_marginStart="51dp"
-        android:layout_marginEnd="50dp"
-        app:layout_constraintRight_toRightOf="@+id/textView17"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView12"
-        tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/textView13" />
-
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="25dp"
-        android:src="@drawable/ic_mail"
-        android:id="@+id/imageView5"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-        android:layout_marginEnd="1dp"
-        app:layout_constraintRight_toRightOf="@+id/imageView4"
-        android:layout_marginTop="45dp"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="43dp"
-        app:layout_constraintLeft_toLeftOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/textView12" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email:"
-        android:textSize="20dp"
-        android:id="@+id/textView13"
-        app:layout_constraintRight_toLeftOf="@+id/textView15"
-        tools:layout_constraintRight_creator="1"
-        android:layout_marginEnd="9dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView15"
-        tools:layout_constraintBaseline_creator="1" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="dpto.informatica@iesmurgi.org"
-        android:textSize="15dp"
-        android:id="@+id/textView15"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginEnd="22dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="104dp" />
-
-    <ImageView
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:src="@drawable/usuarios"
-        android:id="@+id/imageView6"
-        app:layout_constraintRight_toLeftOf="@+id/textView16"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        android:layout_marginEnd="18dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintTop_toTopOf="@+id/textView16" />
-
-    <android.support.constraint.Guideline
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/guideline2"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteY="171dp"
-        tools:layout_editor_absoluteX="0dp"
-        app:layout_constraintGuide_percent="0.3349917" />
+       >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_telefono"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contacto"
+            android:textSize="20sp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/telefono"
+            android:textSize="20sp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+           />
+
+    </LinearLayout>
 
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="25dp"
-        android:text="Creado: "
-        android:textSize="20dp"
-        android:id="@+id/textView16"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="@+id/textView13"
-        android:layout_marginTop="60dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="59dp"
-        app:layout_constraintLeft_toLeftOf="@+id/textView13" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/fax"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            />
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="21dp"
-        android:textSize="15dp"
-        android:text="Luis, Miguel, juanjo y chema"
-        android:id="@+id/textView17"
-        tools:layout_constraintRight_creator="1"
-        android:layout_marginStart="9dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintRight_toRightOf="@+id/textView15"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView16"
-        tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toRightOf="@+id/textView13" />
+        <TextView
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fax"
+            android:textSize="20sp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fax_telefono"
+            android:textSize="20sp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            />
 
-</android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/web"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:text="@string/web_dibujo"
+            android:textSize="20sp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/web_enlace"
+            android:textSize="15sp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:linksClickable="true"
+            android:autoLink="web"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_mail"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textSize="20sp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email_escrito"
+            android:textSize="10sp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
