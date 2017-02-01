@@ -34,7 +34,7 @@ public class VerCursosAdapter extends ArrayAdapter<Cursos> {
 
         if(vista==null){
             Context cnt = vistagrupo.getContext();
-            vista= LayoutInflater.from(cnt).inflate(R.layout.activity_ver_cursos,null);
+            vista= LayoutInflater.from(cnt).inflate(R.layout.esqueleto_ver_cursos,null);
         }
 
         final Cursos mCurso=cursos.get(i);
