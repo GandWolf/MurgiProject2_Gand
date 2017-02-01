@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/VerdeClaro"
     android:orientation="vertical">
     <!--cambiar la imagen -->
     <RelativeLayout
@@ -16,11 +16,7 @@
                android:layout_height="wrap_content"
                android:text="IES MURGI"
                android:gravity="center"
-               android:layout_alignParentBottom="true"
-               android:layout_marginRight="20dp"
-               android:layout_marginBottom="10dp"
-               android:layout_marginLeft="20dp"
-               android:textColor="#ffffff"
+               style="@style/textoInicio"
                android:textSize="40dp"/>
     </RelativeLayout>
     <!--cambiar el color d elos botones y el dibujo que tiene-->
@@ -39,26 +35,17 @@
 
         <ImageButton
             android:id="@+id/boton_ies_murgi"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary"
+            style="@style/botonesFotos"
             android:src="@drawable/historia_cambio"
-            android:scaleType="centerInside"
-            android:baselineAlignBottom="true"
             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_marginBottom="10dp"
+            style="@style/textoFotos"
             android:text="Historia"
-            android:layout_gravity="center"
-            android:textSize="15dp"
-            android:textColor="#000000"
             />
         </LinearLayout>
         <LinearLayout
@@ -72,50 +59,34 @@
             android:id="@+id/boton_contacto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_weight="1"
-            android:scaleType="centerInside"
-            android:background="@color/colorPrimary"
+            style="@style/botonesFotos"
             android:src="@drawable/contacto_cambio"
             />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
                 android:text="Contactos"
-                android:textSize="15dp"
-                android:layout_marginBottom="10dp"
-                android:layout_gravity="center"
-                android:textColor="#000000"
+                style="@style/textoFotos"
                 />
         </LinearLayout>
         <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-            android:layout_weight="1"
+                android:layout_weight="1"
             >
 
         <ImageButton
             android:id="@+id/boton_matriculacion"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_weight="1"
-            android:scaleType="centerInside"
-            android:background="@color/colorPrimary"
+            style="@style/botonesFotos"
             android:src="@drawable/matricula_cambio" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
+                    style="@style/textoFotos"
                     android:text="Matricula"
-                    android:layout_marginBottom="10dp"
-                    android:layout_gravity="center"
-                    android:textSize="15dp"
-                    android:textColor="#000000"
                     />
             </LinearLayout>
     </LinearLayout>
@@ -124,8 +95,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="2"
-        android:background="@color/colorPrimary"
+        android:background="@color/VerdeClaro"
         android:orientation="horizontal">
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -135,23 +107,14 @@
             android:id="@+id/boton_mapa"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerInside"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary"
+            style="@style/botonesFotos"
             android:src="@drawable/mapa_cambio" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
+                style="@style/textoFotos"
                 android:text="Mapa"
-                android:textSize="15dp"
-                android:layout_marginBottom="20dp"
-                android:layout_gravity="center"
-                android:textColor="#000000"
                 />
         </LinearLayout>
             <LinearLayout
@@ -164,24 +127,15 @@
             android:id="@+id/boton_cursos"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerInside"
-            android:layout_weight="1"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:background="@color/colorPrimary"
+            style="@style/botonesFotos"
             android:src="@drawable/cursos_cambio"
             />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
+                    style="@style/textoFotos"
                     android:text="Cursos"
-                    android:layout_marginBottom="20dp"
-                    android:textSize="15dp"
-                    android:layout_gravity="center"
-                    android:textColor="#000000"
+
                     />
             </LinearLayout>
                 <LinearLayout
@@ -193,23 +147,13 @@
             android:id="@+id/boton_cita"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:scaleType="centerInside"
-            android:background="@color/colorPrimary"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
+            style="@style/botonesFotos"
             android:src="@drawable/cita_cambio" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAlignment="center"
+                        style="@style/textoFotos"
                         android:text="Cita"
-                        android:layout_marginBottom="20dp"
-                        android:layout_gravity="center"
-                        android:textSize="15dp"
-                        android:textColor="#000000"
                         />
                 </LinearLayout>
 
