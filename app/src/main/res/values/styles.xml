@@ -3,16 +3,16 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/VerdeOscuro</item>
+        <item name="colorPrimaryDark">@color/VerdeClaro</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
     <!-- Tema Murgi. -->
-    <style name="MurgiTema" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="MurgiTema" parent="AppTheme">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/VerdeClaro</item>
-        <item name="colorPrimaryDark">@color/VerdeOscuro</item>
+        <item name="colorPrimary">@color/VerdeOscuro</item>
+        <item name="colorPrimaryDark">@color/VerdeClaro</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
