@@ -26,11 +26,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Contacto"> </activity>
-        <activity android:name=".Matriculacion">  </activity>
-        <activity android:name=".MapsActivity2"> </activity>
-        <activity android:name=".Historia"> </activity>
-        <activity android:name=".VerCategoriasCursos"> </activity>
+        <activity android:name=".Contacto"></activity>
+        <activity android:name=".Matriculacion"></activity>
+        <activity android:name=".MapsActivity2"></activity>
+        <activity android:name=".Historia"></activity>
+        <activity android:name=".VerCategoriasCursos"></activity>
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -44,6 +44,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <activity android:name=".VerCursos"></activity>
     </application>
 
 </manifest>
