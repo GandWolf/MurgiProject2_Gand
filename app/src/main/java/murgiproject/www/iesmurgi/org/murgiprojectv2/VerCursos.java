@@ -25,19 +25,30 @@ public class VerCursos extends AppCompatActivity {
 
         if(pos==1){
             cursos=new ArrayList<>();
-            cursos.add(new Cursos("BACHILLERATO EN CIENCIAS Y TECNOLOGÍA ","descripcion de bachillertato", R.drawable.bachillerato));
-            cursos.add(new Cursos("BACHILLERATO EN HUMANIDADES Y CIENCIAS SOCIALES","descripcion de bachillertato", R.drawable.bachillerato));
-            cursos.add(new Cursos("BACHILLERATO EN ARTES ","descripcion de bachillertato", R.drawable.bachillerato));
+            cursos.add(new Cursos("BACHILLERATO EN CIENCIAS Y TECNOLOGÍA ","descripcion ", R.drawable.bachillerato));
+            cursos.add(new Cursos("BACHILLERATO EN HUMANIDADES Y CIENCIAS SOCIALES","descripcion ", R.drawable.bachillerato));
+            cursos.add(new Cursos("BACHILLERATO EN ARTES ","descripcion", R.drawable.bachillerato));
         }
 
         if(pos==2){
             cursos=new ArrayList<>();
-            cursos.add(new Cursos("EL","",R.drawable.fp_basica));
+            cursos.add(new Cursos("Mantenimiento de vehículos"," Realizar operaciones básicas de mantenimiento electromecánico y carrocería de vehículos, desmontando y montando elementos",R.drawable.mecanica_motor));
         }
 
+        if(pos==3){
+            cursos=new ArrayList<>();
+            cursos.add(new Cursos("Sistemas Microinformáticos y redes (SMR)","Instalar, configurar y mantener sistemas microinformáticos, aislados o en red, así como redes locales en pequeños entornos." ,R.drawable.fp_medio));
+            cursos.add(new Cursos("Gestión administrativa (GAD) ","Realizar actividades de apoyo administrativo en el ámbito laboral, contable, comercial, financiero y fiscal, así como de atención al cliente/usuario, tanto en empresas públicas como privadas, aplicando la normativa vigente y protocolos de calidad, asegurando la satisfacción del cliente y actuando según normas de prevención de riesgos laborales y protección ambiental." ,R.drawable.fp_medio));
+            cursos.add(new Cursos("Instalaciones Eléctricas y Automáticas (IEA) ","Montar y mantener infraestructuras de telecomunicación en edificios, instalaciones eléctricas de baja tensión, máquinas eléctricas y sistemas automatizados." ,R.drawable.fp_medio));
+            cursos.add(new Cursos("Electromecánica de Vehículos Automóviles ","Proporciona los conocimientos necesarios para efectuar operaciones de mantenimiento, montaje de accesorios y transformaciones del vehículo en las áreas de mecánica, hidráulica, neumática y electricidad, además de ajustarse a los procedimientos y tiempos determinados, consiguiendo la calidad requerida y cumpliendo las condiciones de seguridad establecidas." , R.drawable.mecanica_motor));
+        }
+
+        if(pos==4) {
+            cursos = new ArrayList<>();
+            cursos.add(new Cursos("Desarrollo de Aplicaciones Multiplataforma","Desarrollando aplicaciones informáticas para la gestión empresarial y de negocio. Desarrollando aplicaciones de propósito general. Desarrollando aplicaciones en el ámbito del entretenimiento y la informática móvil.",R.drawable.fp_superior));
 
 
-
+        }
 
 
 
