@@ -22,11 +22,23 @@ public class VerCursos extends AppCompatActivity {
         Bundle b = i.getExtras();
         pos = b.getInt("pos");
 
-        cursos=new ArrayList<>();
+
         if(pos==1){
-            cursos.add(new Cursos("Bachillerato a","descripcion de bachillertato", R.drawable.bachillerato));
-            cursos.add(new Cursos("Bachillerato b","descripcion de bachillertato", R.drawable.bachillerato));
+            cursos=new ArrayList<>();
+            cursos.add(new Cursos("BACHILLERATO EN CIENCIAS Y TECNOLOGÍA ","descripcion de bachillertato", R.drawable.bachillerato));
+            cursos.add(new Cursos("BACHILLERATO EN HUMANIDADES Y CIENCIAS SOCIALES","descripcion de bachillertato", R.drawable.bachillerato));
+            cursos.add(new Cursos("BACHILLERATO EN ARTES ","descripcion de bachillertato", R.drawable.bachillerato));
         }
+
+        if(pos==2){
+            cursos=new ArrayList<>();
+            cursos.add(new Cursos("EL","",R.drawable.fp_basica));
+        }
+
+
+
+
+
 
 
         adapter = new VerCursosAdapter(this, cursos);

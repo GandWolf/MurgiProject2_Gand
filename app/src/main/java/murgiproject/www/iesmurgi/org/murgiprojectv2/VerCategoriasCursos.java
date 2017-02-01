@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 public class VerCategoriasCursos extends AppCompatActivity {
 
     ImageButton btn_bachiller, btn_fpBasica, btn_fpMedio, btn_fpSuperior, btn_eoIdiomas;
-    int pos=0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,19 +26,15 @@ public class VerCategoriasCursos extends AppCompatActivity {
         btn_bachiller.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                pos=1;
-                Intent i = new Intent(VerCategoriasCursos.this, VerCursos.class);
-                Bundle b = new Bundle();
-                b.putInt("pos", pos);
-                i.putExtras(b);
-                startActivity(i);
+                startActivity(1);
+
             }
         });
 
         btn_fpBasica.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(2);
             }
         });
 
@@ -46,23 +42,31 @@ public class VerCategoriasCursos extends AppCompatActivity {
         btn_fpMedio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(3);
             }
         });
 
         btn_fpSuperior.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(4);
             }
         });
 
         btn_eoIdiomas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(5);
             }
         });
 
+
+    }
+    public void startActivity(int pos){
+        Intent i = new Intent(VerCategoriasCursos.this, VerCursos.class);
+        Bundle b = new Bundle();
+        b.putInt("pos", pos);
+        i.putExtras(b);
+        startActivity(i);
     }
 }
