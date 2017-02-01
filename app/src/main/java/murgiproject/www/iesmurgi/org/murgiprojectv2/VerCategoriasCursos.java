@@ -27,7 +27,7 @@ public class VerCategoriasCursos extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 pos=1;
-                Intent i = new Intent(VerCategoriasCursos.this, MainActivity.class);
+                Intent i = new Intent(VerCategoriasCursos.this, VerCursos.class);
                 Bundle b = new Bundle();
                 b.putInt("pos", pos);
                 i.putExtras(b);

@@ -7,14 +7,14 @@ package murgiproject.www.iesmurgi.org.murgiprojectv2;
 public class Cursos {
 
 
-    private String titulo , descripcion, aisgnaturas ;
+    private String titulo , descripcion ;
     private int imagen;
 
 
-    public Cursos(String titulo, String descripcion, String aisgnaturas, int imagen) {
+    public Cursos(String titulo, String descripcion, int imagen) {
         this.titulo = titulo;
         this.descripcion = descripcion;
-        this.aisgnaturas = aisgnaturas;
+
         this.imagen = imagen;
     }
 
@@ -35,13 +35,6 @@ public class Cursos {
         this.descripcion = descripcion;
     }
 
-    public String getAisgnaturas() {
-        return aisgnaturas;
-    }
-
-    public void setAisgnaturas(String aisgnaturas) {
-        this.aisgnaturas = aisgnaturas;
-    }
 
     public int getImagen() {
         return imagen;
