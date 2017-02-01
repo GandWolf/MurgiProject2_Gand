@@ -6,6 +6,8 @@
 
     <string name="action_settings">Settings</string>
 
+    <string name="nombre">IES Murgi</string>
+
     <string name="historia_cabecera">Historia del IES Murgi</string>
     <string name="historia_cabecera_descripcion">Descripción</string>
     <string name="historia_texto_descripcion">El IES Murgi abierto a la docencia desde el siglo XX lleva dando clase tanto a docentes de la ESO, Bachillerato y FP.</string>
