@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class VerCursos extends AppCompatActivity {
+public class VerCategoriasCursos extends AppCompatActivity {
 
     ImageButton btn_bachiller, btn_fpBasica, btn_fpMedio, btn_fpSuperior, btn_eoIdiomas;
     int pos=0;
@@ -14,7 +14,7 @@ public class VerCursos extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ver_cursos);
+        setContentView(R.layout.activity_ver_categoria_cursos);
 
         btn_bachiller = (ImageButton) findViewById(R.id.btn_irBachillerato);
         btn_fpBasica = (ImageButton) findViewById(R.id.btn_irFpBasico);
@@ -27,7 +27,7 @@ public class VerCursos extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 pos=1;
-                Intent i = new Intent(VerCursos.this, MainActivity.class);
+                Intent i = new Intent(VerCategoriasCursos.this, MainActivity.class);
                 Bundle b = new Bundle();
                 b.putInt("pos", pos);
                 i.putExtras(b);
