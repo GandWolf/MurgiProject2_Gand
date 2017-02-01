@@ -45,8 +45,8 @@ public class VerCursosAdapter extends ArrayAdapter<Cursos> {
 
 
         titulo.setText(mCurso.getTitulo());
-        descripcion.setText(mCurso.getGenero());
-        imagen.setImageResource(mCurso.getPortada());
+        descripcion.setText(mCurso.getDescripcion());
+        imagen.setImageResource(mCurso.getImagen());
 
 
 
