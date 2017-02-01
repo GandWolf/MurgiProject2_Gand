@@ -15,13 +15,14 @@ public class VerCursos extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ver_cursos);
+        setContentView(R.layout.activty_list);
 
         //nposicion de categoria
         Intent i = getIntent();
         Bundle b = i.getExtras();
         pos = b.getInt("pos");
 
+        cursos=new ArrayList<>();
         if(pos==1){
             cursos.add(new Cursos("Bachillerato a","descripcion de bachillertato", R.drawable.bachillerato));
             cursos.add(new Cursos("Bachillerato b","descripcion de bachillertato", R.drawable.bachillerato));
