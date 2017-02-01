@@ -14,7 +14,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="murgiproject.www.iesmurgi.org.murgiprojectv2.VerCursos">
+    tools:context="murgiproject.www.iesmurgi.org.murgiprojectv2.VerCategoriasCursos">
 
 
 <ImageButton
@@ -33,7 +33,7 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/fpbasica"
+        android:src="@drawable/sele_fpbasica"
         android:id="@+id/btn_irFpBasico"
         android:layout_marginBottom="80dp"
         android:scaleType="centerInside"
@@ -47,7 +47,7 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/fpmedio"
+        android:src="@drawable/sele_fpmedio"
         android:id="@+id/btn_irGradoMedio"
         android:layout_marginBottom="80dp"
         android:scaleType="centerInside"
@@ -60,7 +60,7 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/fpgs"
+        android:src="@drawable/sele_fpsuperior"
         android:id="@+id/btn_irGradoSuperior"
         android:layout_marginBottom="80dp"
         android:scaleType="centerInside"
@@ -72,7 +72,7 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/eoidiomas"
+        android:src="@drawable/sele_escuelaidiomas"
         android:id="@+id/btn_irEscuelaIdiomas"
         android:layout_marginBottom="16dp"
         android:scaleType="centerInside"
