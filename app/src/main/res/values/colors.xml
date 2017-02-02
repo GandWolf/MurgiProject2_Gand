@@ -2,11 +2,12 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#33691e</color>
     <color name="colorTitulo">#000000</color>
     <color name="colorSubtitulo">#FF4081</color>
     <color name="blanco">#fff</color>
     <color name="negro">#000</color>
     <color name="VerdeClaro">#c5e1a5</color>
     <color name="VerdeOscuro">#33691e</color>
+
 </resources>

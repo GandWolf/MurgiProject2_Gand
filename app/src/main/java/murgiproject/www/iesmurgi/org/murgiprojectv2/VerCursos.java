@@ -1,13 +1,17 @@
 package murgiproject.www.iesmurgi.org.murgiprojectv2;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
 public class VerCursos extends AppCompatActivity {
+    FloatingActionButton fab_atras;
     VerCursosAdapter adapter;
     ListView listView;
     ArrayList<Cursos> cursos;
@@ -16,6 +20,15 @@ public class VerCursos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activty_list);
+
+        fab_atras=(FloatingActionButton)findViewById(R.id.fab);
+        fab_atras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent actividadCursos = new Intent(VerCursos.this, MainActivity.class);
+                startActivity(actividadCursos);
+            }
+        });
 
         //nposicion de categoria
         Intent i = getIntent();
