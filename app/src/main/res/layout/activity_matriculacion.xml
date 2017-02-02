@@ -421,19 +421,33 @@
     </LinearLayout>
 
 
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_secretariaVitual"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/logo_secretaria_virtual"
+            />
+
     <TextView
         android:text="@string/infoAndalucia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tv_infoMatriculas"
         android:textSize="20sp"
-        android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:textAlignment="center"
         android:textStyle="normal|bold"
         android:layout_marginBottom="16dp" />
+
+
+
 
 </LinearLayout>
 
