@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButton matriculacion = (ImageButton)findViewById(R.id.boton_matriculacion);
         ImageButton mapa= (ImageButton)findViewById(R.id.boton_mapa);
         ImageButton curso= (ImageButton)findViewById(R.id.boton_cursos);
-        ImageButton cita= (ImageButton)findViewById(R.id.boton_cita);
+        ImageButton citas= (ImageButton)findViewById(R.id.boton_cita);
 
         setSupportActionBar(toolbar);
 
@@ -75,13 +75,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-/*
-        cita.setOnClickListener(new View.OnClickListener() {
+
+        citas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), Cita.class);
+                Intent intent = new Intent(getBaseContext(), Citas.class);
                 startActivity(intent);
             }
-        });*/
+        });
     }
 }
