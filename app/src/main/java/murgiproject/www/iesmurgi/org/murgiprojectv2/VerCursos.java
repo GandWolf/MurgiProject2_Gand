@@ -59,8 +59,7 @@ public class VerCursos extends AppCompatActivity {
         if(pos==4) {
             cursos = new ArrayList<>();
             cursos.add(new Cursos("Desarrollo de Aplicaciones Multiplataforma","Desarrollando aplicaciones informáticas para la gestión empresarial y de negocio. Desarrollando aplicaciones de propósito general. Desarrollando aplicaciones en el ámbito del entretenimiento y la informática móvil.",R.drawable.fp_superior));
-
-
+            cursos.add(new Cursos("Administración y Finanzas", " Este profesional ejerce su actividad tanto en grandes como en medianas y pequeñas empresas, en cualquier sector de actividad, y particularmente en el sector servicios, así como en las administraciones públicas, desempeñando las tareas administrativas en la gestión y el asesoramiento en las áreas laboral, comercial, contable y fiscal de dichas empresas e instituciones, ofreciendo un servicio y atención a los clientes y ciudadanos, realizando trámites administrativos con las administraciones públicas y gestionando el archivo y las comunicaciones de la empresa. " , R.drawable.fp_superior));
         }
 
 

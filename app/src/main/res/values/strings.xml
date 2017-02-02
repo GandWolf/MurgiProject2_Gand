@@ -38,18 +38,19 @@
     <string name="fpsuperio5">Haber obtenido una titulación universitaria o equivalente.</string>
     <string name="fpsuperio6">Si no cumples alguno de estos requisitos puedes presentarte a una prueba de acceso que se convoca todos los años, normalmente en junio o también puede que en septiembre.</string>
     <string name="requisitos_para_acceder">Admisión y matriculación:</string>
+    <string name="linkSecretariaVitual"><a href="https://www.juntadeandalucia.es/educacion/secretariavirtual/"> </a></string>
     <string name="title_activity_maps2">Map</string>
 
     <string name="logo_murgi">Ies Murgi</string>
-    <string name="contacto">contacto</string>
+    <string name="contacto">Contacto</string>
     <string name="telefono">950481000</string>
-    <string name="fax">fax</string>
+    <string name="fax">Fax</string>
     <string name="fax_telefono">950323232</string>
-    <string name="web_dibujo">web</string>
+    <string name="web_dibujo">Web</string>
     <string name="web_enlace">www.iesmurgi.org</string>
-    <string name="email">email</string>
+    <string name="email">Email</string>
     <string name="email_escrito">dpto.informatica@iesmurgi.org</string>
-    <string name="desarrollada">Aplicacion desarrollada por: </string>
+    <string name="desarrollada">Aplicación desarrollada por: </string>
     <string name="Luis_nombre">Luis Monge</string>
     <string name="Luis_email">luismdam@gmail.com</string>
     <string name="chema_nombre">Jose María Pérez</string>

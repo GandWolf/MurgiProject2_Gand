@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorTitulo">#000000</color>
     <color name="colorSubtitulo">#FF4081</color>
     <color name="blanco">#fff</color>
     <color name="negro">#000</color>
-    <color name="VerdeClaro">#c5e1a5</color>
-    <color name="VerdeOscuro">#33691e</color>
+
+    <color name="Verde1">#e8f5e9</color>
+    <color name="Verde2">#c8e6c9</color>
+    <color name="Verde3">#a5d6a7</color>
+    <color name="Verde4">#81c784</color><!-- verde calro-->
+    <color name="Verde5">#66bb6a</color>
+    <color name="Verde6">#4caf50</color>
+    <color name="Verde7">#43a047</color>
+    <color name="Verde8">#388e3c</color>
+    <color name="Verde9">#2e7d32</color><!-- verde oscuro-->
+    <color name="Verde10">#1b5e20</color>
+    <color name="Verde11">#b9f6ca</color>
+    <color name="Verde12">#69f0ae</color>
+    <color name="Verde13">#00e676</color>
+    <color name="Verde14">#00c853</color>
+
+
 
 </resources>
