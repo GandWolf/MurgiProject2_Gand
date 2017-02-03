@@ -1,11 +1,13 @@
 package murgiproject.www.iesmurgi.org.murgiprojectv2;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
 
         ImageButton murgi = (ImageButton)findViewById(R.id.boton_ies_murgi);
         ImageButton contacto = (ImageButton)findViewById(R.id.boton_contacto);
@@ -22,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButton curso= (ImageButton)findViewById(R.id.boton_cursos);
         ImageButton cita= (ImageButton)findViewById(R.id.boton_cita);
 
-        setSupportActionBar(toolbar);
+
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -35,7 +37,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Temporal
-
+        TextView titulo_splash= (TextView)findViewById(R.id.textoInicio);
+        Typeface face= Typeface.createFromAsset(getAssets(),"font/letra.TTF"); //Llamamos a la fuente no incluida en Android
+        titulo_splash.setTypeface(face);
         murgi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

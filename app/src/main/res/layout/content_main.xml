@@ -15,6 +15,7 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:text="IES MURGI"
+               android:id="@+id/textoInicio"
                android:gravity="center"
                style="@style/textoInicio"
                android:textSize="40dp"/>
@@ -31,7 +32,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@color/Verde9"
-           android:layout_weight="1"
+            android:layout_weight="1"
            >
 
         <ImageButton
@@ -91,7 +92,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/textoFotos"
-                    android:text="Matricula"
+                    android:text="Matrícula"
                     />
             </LinearLayout>
     </LinearLayout>
