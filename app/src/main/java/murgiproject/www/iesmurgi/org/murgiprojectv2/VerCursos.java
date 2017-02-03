@@ -66,11 +66,11 @@ public class VerCursos extends AppCompatActivity {
 
         if(pos==5){
             cursos = new ArrayList<>();
-            cursos.add(new Cursos("Ingles","Certificado de Nivel Básico (A2), de Nivel Intermedio (B1) , Certificado de Nivel Avanzado (B2)  , Certificado de Nivel C1  , CERTIFICACIONES GRUPOS CAL" , R.drawable.escuela_idiomas));
-            cursos.add(new Cursos("Frances","Certificado de Nivel Básico (A2), de Nivel Intermedio (B1) , Certificado de Nivel Avanzado (B2)  , Certificado de Nivel C1  , CERTIFICACIONES GRUPOS CAL" , R.drawable.escuela_idiomas));
-            cursos.add(new Cursos("Arabe","Certificado de Nivel Básico (A2), de Nivel Intermedio (B1) , Certificado de Nivel Avanzado (B2), CERTIFICACIONES GRUPOS CAL" , R.drawable.escuela_idiomas));
-            cursos.add(new Cursos("Aleman","Certificado de Nivel Básico (A2), de Nivel Intermedio (B1) , Certificado de Nivel Avanzado (B2), CERTIFICACIONES GRUPOS CAL" , R.drawable.escuela_idiomas));
-            cursos.add(new Cursos("Pagina Web", "http://www.eoielejido.es", R.drawable.escuela_idiomas));
+            cursos.add(new Cursos("Ingles","Certificado de Nivel Básico (A2), de Nivel Intermedio (B1), Certificado de Nivel Avanzado (B2), Certificado de Nivel C1, CERTIFICACIONES GRUPOS CAL" , R.drawable.vacio));
+            cursos.add(new Cursos("Frances","Certificado de Nivel Básico (A2), de Nivel Intermedio (B1), Certificado de Nivel Avanzado (B2), Certificado de Nivel C1, CERTIFICACIONES GRUPOS CAL" , R.drawable.vacio));
+            cursos.add(new Cursos("Arabe","Certificado de Nivel Básico (A2), de Nivel Intermedio (B1), Certificado de Nivel Avanzado (B2), CERTIFICACIONES GRUPOS CAL" , R.drawable.vacio));
+            cursos.add(new Cursos("Aleman","Certificado de Nivel Básico (A2), de Nivel Intermedio (B1), Certificado de Nivel Avanzado (B2), CERTIFICACIONES GRUPOS CAL" , R.drawable.vacio));
+            cursos.add(new Cursos("Pagina Web EOI", "www.eoielejido.es", R.drawable.escuela_idiomas));
         }
 
 
