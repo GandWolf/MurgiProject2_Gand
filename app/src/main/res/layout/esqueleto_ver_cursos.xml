@@ -41,7 +41,6 @@
         android:textSize="20sp"
         android:layout_marginBottom="16dp"
         android:layout_gravity="center"
-        android:src="@drawable/bachillerato"
         android:id="@+id/iv_portada" />
 
 

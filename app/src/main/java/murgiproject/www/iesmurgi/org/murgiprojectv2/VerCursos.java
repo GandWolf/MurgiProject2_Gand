@@ -19,7 +19,7 @@ public class VerCursos extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activty_list);
+        setContentView(R.layout.activity_list);
 
         fab_atras=(FloatingActionButton)findViewById(R.id.fab);
         fab_atras.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +78,8 @@ public class VerCursos extends AppCompatActivity {
         adapter = new VerCursosAdapter(this, cursos);
         listView = (ListView) findViewById(R.id.mListView);
         listView.setAdapter(adapter);
+
+
 
 
     }
