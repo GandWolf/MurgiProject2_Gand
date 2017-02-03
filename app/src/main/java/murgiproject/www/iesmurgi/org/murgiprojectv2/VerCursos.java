@@ -45,22 +45,32 @@ public class VerCursos extends AppCompatActivity {
 
         if(pos==2){
             cursos=new ArrayList<>();
-            cursos.add(new Cursos("Mantenimiento de vehículos"," Realizar operaciones básicas de mantenimiento electromecánico y carrocería de vehículos, desmontando y montando elementos",R.drawable.mecanica_motor));
+            cursos.add(new Cursos("Mantenimiento de vehículos"," Realizar operaciones básicas de mantenimiento electromecánico y carrocería de vehículos, desmontando y montando elementos",R.drawable.fp_electromecanica));
         }
 
         if(pos==3){
             cursos=new ArrayList<>();
-            cursos.add(new Cursos("Sistemas Microinformáticos y redes (SMR)","Instalar, configurar y mantener sistemas microinformáticos, aislados o en red, así como redes locales en pequeños entornos." ,R.drawable.fp_medio));
-            cursos.add(new Cursos("Gestión administrativa (GAD) ","Realizar actividades de apoyo administrativo en el ámbito laboral, contable, comercial, financiero y fiscal, así como de atención al cliente/usuario, tanto en empresas públicas como privadas, aplicando la normativa vigente y protocolos de calidad, asegurando la satisfacción del cliente y actuando según normas de prevención de riesgos laborales y protección ambiental." ,R.drawable.fp_medio));
-            cursos.add(new Cursos("Instalaciones Eléctricas y Automáticas (IEA) ","Montar y mantener infraestructuras de telecomunicación en edificios, instalaciones eléctricas de baja tensión, máquinas eléctricas y sistemas automatizados." ,R.drawable.fp_medio));
-            cursos.add(new Cursos("Electromecánica de Vehículos Automóviles ","Proporciona los conocimientos necesarios para efectuar operaciones de mantenimiento, montaje de accesorios y transformaciones del vehículo en las áreas de mecánica, hidráulica, neumática y electricidad, además de ajustarse a los procedimientos y tiempos determinados, consiguiendo la calidad requerida y cumpliendo las condiciones de seguridad establecidas." , R.drawable.mecanica_motor));
+            cursos.add(new Cursos("Sistemas Microinformáticos y redes (SMR)","Instalar, configurar y mantener sistemas microinformáticos, aislados o en red, así como redes locales en pequeños entornos." ,R.drawable.fp_smr));
+            cursos.add(new Cursos("Gestión administrativa (GAD) ","Realizar actividades de apoyo administrativo en el ámbito laboral, contable, comercial, financiero y fiscal, así como de atención al cliente/usuario, tanto en empresas públicas como privadas, aplicando la normativa vigente y protocolos de calidad, asegurando la satisfacción del cliente y actuando según normas de prevención de riesgos laborales y protección ambiental." ,R.drawable.fp_gestion_administrativa));
+            cursos.add(new Cursos("Instalaciones Eléctricas y Automáticas (IEA) ","Montar y mantener infraestructuras de telecomunicación en edificios, instalaciones eléctricas de baja tensión, máquinas eléctricas y sistemas automatizados." ,R.drawable.fp_electronica));
+            cursos.add(new Cursos("Electromecánica de Vehículos Automóviles ","Proporciona los conocimientos necesarios para efectuar operaciones de mantenimiento, montaje de accesorios y transformaciones del vehículo en las áreas de mecánica, hidráulica, neumática y electricidad, además de ajustarse a los procedimientos y tiempos determinados, consiguiendo la calidad requerida y cumpliendo las condiciones de seguridad establecidas." , R.drawable.fp_vehiculos));
         }
 
         if(pos==4) {
             cursos = new ArrayList<>();
-            cursos.add(new Cursos("Desarrollo de Aplicaciones Multiplataforma","Desarrollando aplicaciones informáticas para la gestión empresarial y de negocio. Desarrollando aplicaciones de propósito general. Desarrollando aplicaciones en el ámbito del entretenimiento y la informática móvil.",R.drawable.fp_superior));
-            cursos.add(new Cursos("Administración y Finanzas", " Este profesional ejerce su actividad tanto en grandes como en medianas y pequeñas empresas, en cualquier sector de actividad, y particularmente en el sector servicios, así como en las administraciones públicas, desempeñando las tareas administrativas en la gestión y el asesoramiento en las áreas laboral, comercial, contable y fiscal de dichas empresas e instituciones, ofreciendo un servicio y atención a los clientes y ciudadanos, realizando trámites administrativos con las administraciones públicas y gestionando el archivo y las comunicaciones de la empresa. " , R.drawable.fp_superior));
-            cursos.add(new Cursos ("Instalaciones Electrotécnicas" , "Ejercer mi actividad profesional en el sector de la electricidad y la electrónica público y privado, en empresas privadas del sector o creando mi propia empresa." , R.drawable.fp_superior));
+            cursos.add(new Cursos("Desarrollo de Aplicaciones Multiplataforma","Desarrollando aplicaciones informáticas para la gestión empresarial y de negocio. Desarrollando aplicaciones de propósito general. Desarrollando aplicaciones en el ámbito del entretenimiento y la informática móvil.",R.drawable.fp_dam));
+            cursos.add(new Cursos("Desarrollo de Aplicaciones Web"," Desarrollar, implantar, y mantener aplicaciones web, con independencia del modelo empleado y utilizando tecnologías específicas, garantizando el acceso a los datos de forma segura y cumpliendo los criterios de accesibilidad, usabilidad y calidad exigidas en los estándares establecidos. ", R.drawable.fp_daw));
+            cursos.add(new Cursos("Administración y Finanzas", " Este profesional ejerce su actividad tanto en grandes como en medianas y pequeñas empresas, en cualquier sector de actividad, y particularmente en el sector servicios, así como en las administraciones públicas, desempeñando las tareas administrativas en la gestión y el asesoramiento en las áreas laboral, comercial, contable y fiscal de dichas empresas e instituciones, ofreciendo un servicio y atención a los clientes y ciudadanos, realizando trámites administrativos con las administraciones públicas y gestionando el archivo y las comunicaciones de la empresa. " , R.drawable.fp_finanzas));
+            cursos.add(new Cursos ("Instalaciones Electrotécnicas" , "Ejercer mi actividad profesional en el sector de la electricidad y la electrónica público y privado, en empresas privadas del sector o creando mi propia empresa." , R.drawable.fp_electronica));
+        }
+
+        if(pos==5){
+            cursos = new ArrayList<>();
+            cursos.add(new Cursos("Ingles","Certificado de Nivel Básico (A2), de Nivel Intermedio (B1), Certificado de Nivel Avanzado (B2), Certificado de Nivel C1, CERTIFICACIONES GRUPOS CAL" , R.drawable.vacio));
+            cursos.add(new Cursos("Frances","Certificado de Nivel Básico (A2), de Nivel Intermedio (B1), Certificado de Nivel Avanzado (B2), Certificado de Nivel C1, CERTIFICACIONES GRUPOS CAL" , R.drawable.vacio));
+            cursos.add(new Cursos("Arabe","Certificado de Nivel Básico (A2), de Nivel Intermedio (B1), Certificado de Nivel Avanzado (B2), CERTIFICACIONES GRUPOS CAL" , R.drawable.vacio));
+            cursos.add(new Cursos("Aleman","Certificado de Nivel Básico (A2), de Nivel Intermedio (B1), Certificado de Nivel Avanzado (B2), CERTIFICACIONES GRUPOS CAL" , R.drawable.vacio));
+            cursos.add(new Cursos("Pagina Web EOI", "www.eoielejido.es", R.drawable.escuela_idiomas));
         }
 
 
