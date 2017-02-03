@@ -7,6 +7,7 @@ import android.view.View;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,12 +18,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.content_main);
 
 
-        ImageButton murgi = (ImageButton)findViewById(R.id.boton_ies_murgi);
-        ImageButton contacto = (ImageButton)findViewById(R.id.boton_contacto);
-        ImageButton matriculacion = (ImageButton)findViewById(R.id.boton_matriculacion);
-        ImageButton mapa= (ImageButton)findViewById(R.id.boton_mapa);
-        ImageButton curso= (ImageButton)findViewById(R.id.boton_cursos);
-        ImageButton citas= (ImageButton)findViewById(R.id.boton_cita);
+        LinearLayout iesmurgi = (LinearLayout)findViewById(R.id.ir_iesMurgi);
+        LinearLayout contacto = (LinearLayout)findViewById(R.id.boton_contacto);
+        LinearLayout matriculacion = (LinearLayout)findViewById(R.id.boton_matriculacion);
+        LinearLayout mapa= (LinearLayout)findViewById(R.id.boton_mapa);
+        LinearLayout curso= (LinearLayout)findViewById(R.id.boton_cursos);
+        LinearLayout citas= (LinearLayout)findViewById(R.id.boton_cita);
+
 
 
 
@@ -40,13 +42,22 @@ public class MainActivity extends AppCompatActivity {
         TextView titulo_splash= (TextView)findViewById(R.id.textoInicio);
         Typeface face= Typeface.createFromAsset(getAssets(),"font/letra.TTF"); //Llamamos a la fuente no incluida en Android
         titulo_splash.setTypeface(face);
-        murgi.setOnClickListener(new View.OnClickListener() {
+//        murgi.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//               Intent intent = new Intent(getApplicationContext(), Historia.class);
+//               startActivity(intent);
+//            }
+//        });
+
+        iesmurgi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               Intent intent = new Intent(getApplicationContext(), Historia.class);
-               startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), Historia.class);
+                startActivity(intent);
             }
         });
+
 
         contacto.setOnClickListener(new View.OnClickListener() {
             @Override
