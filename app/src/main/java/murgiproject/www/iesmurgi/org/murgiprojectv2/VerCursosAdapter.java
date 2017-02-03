@@ -2,7 +2,9 @@ package murgiproject.www.iesmurgi.org.murgiprojectv2;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,14 +20,14 @@ import java.util.ArrayList;
 
 public class VerCursosAdapter extends ArrayAdapter<Cursos> {
 
+
+
     ArrayList<Cursos>cursos;
 
     VerCursosAdapter(Activity context , ArrayList<Cursos>cur){
         super(context, 0, cur);
         this.cursos=cur;
     }
-
-
 
     @NonNull
     @Override
@@ -37,6 +39,8 @@ public class VerCursosAdapter extends ArrayAdapter<Cursos> {
             vista= LayoutInflater.from(cnt).inflate(R.layout.esqueleto_ver_cursos,null);
         }
 
+
+
         final Cursos mCurso=cursos.get(i);
         TextView titulo=(TextView)vista.findViewById(R.id.tv_titulo);
         TextView descripcion =(TextView)vista.findViewById(R.id.tv_descripcion);
@@ -47,8 +51,6 @@ public class VerCursosAdapter extends ArrayAdapter<Cursos> {
         titulo.setText(mCurso.getTitulo());
         descripcion.setText(mCurso.getDescripcion());
         imagen.setImageResource(mCurso.getImagen());
-
-
 
         return vista;
 

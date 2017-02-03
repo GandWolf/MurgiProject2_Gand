@@ -38,9 +38,9 @@ public class VerCursos extends AppCompatActivity {
 
         if(pos==1){
             cursos=new ArrayList<>();
-            cursos.add(new Cursos("BACHILLERATO EN CIENCIAS Y TECNOLOGÍA ","descripcion ", R.drawable.bachillerato));
-            cursos.add(new Cursos("BACHILLERATO EN HUMANIDADES Y CIENCIAS SOCIALES","descripcion ", R.drawable.bachillerato));
-            cursos.add(new Cursos("BACHILLERATO EN ARTES ","descripcion", R.drawable.bachillerato));
+            cursos.add(new Cursos("Bachillerato en Ciencias de la Tecnologia","Los alumnos desde este bachillerato pueden  especializarse  en  la  rama  de Ciencias  de  la  Salud,  cursando  las asignaturas  propias  de  la modalidad o en la rama de CC e Ingeniería en la que  desarrollan las competencias  y  adquieren los conocimientos técnicos para  el  acceso  a  cualquier  Ciclo  Formativo relacionado con la  Tecnología  o Grado Universitario de Ingeniería o Arquitectura. ", R.drawable.bachillerato));
+            cursos.add(new Cursos("Bachillerato en Humanidades y Ciencias sociales", "El Bachillerato es un programa de formación básica de carácter inicial en áreas disciplinares fundamentales de la Ciencias  Sociales. Entrega un repertorio de conocimientos necesarios para formar un ciudadano crítico, con un marco cultural que  le permita  enfrentar un mundo cada vez más complejo, y orienta vocacionalmente al estudiante para continuar estudios conducentes a grado académico de licenciado y/o título profesional. ", R.drawable.bachillerato));
+            cursos.add(new Cursos("Bachillerato en Artes ","El bachillerato de artes supone la incorporación de las Enseñanzas Artísticas a la Enseñanza Secundaria como estudios especializados. Esta modalidad de bachillerato atiende al desarrollo y formación integral del alumno mediante el estudio de los lenguajes plásticos, poniéndolo en cantacto con una serie de metodologías específicas del diseño.", R.drawable.bachillerato));
         }
 
         if(pos==2){
@@ -60,6 +60,7 @@ public class VerCursos extends AppCompatActivity {
             cursos = new ArrayList<>();
             cursos.add(new Cursos("Desarrollo de Aplicaciones Multiplataforma","Desarrollando aplicaciones informáticas para la gestión empresarial y de negocio. Desarrollando aplicaciones de propósito general. Desarrollando aplicaciones en el ámbito del entretenimiento y la informática móvil.",R.drawable.fp_superior));
             cursos.add(new Cursos("Administración y Finanzas", " Este profesional ejerce su actividad tanto en grandes como en medianas y pequeñas empresas, en cualquier sector de actividad, y particularmente en el sector servicios, así como en las administraciones públicas, desempeñando las tareas administrativas en la gestión y el asesoramiento en las áreas laboral, comercial, contable y fiscal de dichas empresas e instituciones, ofreciendo un servicio y atención a los clientes y ciudadanos, realizando trámites administrativos con las administraciones públicas y gestionando el archivo y las comunicaciones de la empresa. " , R.drawable.fp_superior));
+            cursos.add(new Cursos ("Instalaciones Electrotécnicas" , "Ejercer mi actividad profesional en el sector de la electricidad y la electrónica público y privado, en empresas privadas del sector o creando mi propia empresa." , R.drawable.fp_superior));
         }
 
 
