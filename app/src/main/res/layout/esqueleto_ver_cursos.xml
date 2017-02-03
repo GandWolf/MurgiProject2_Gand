@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_ver_cursos"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,6 +19,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginBottom="16dp"
+        android:layout_marginTop="24dp"
         android:layout_gravity="center"
         android:textAlignment="center"
         android:id="@+id/tv_titulo" />
@@ -30,6 +31,8 @@
         android:layout_marginBottom="16dp"
         android:layout_gravity="center"
         android:textAlignment="center"
+        android:autoLink="web"
+        android:linksClickable="true"
         android:id="@+id/tv_descripcion" />
 
     <ImageView
@@ -40,4 +43,6 @@
         android:layout_gravity="center"
         android:src="@drawable/bachillerato"
         android:id="@+id/iv_portada" />
+
+
 </LinearLayout>

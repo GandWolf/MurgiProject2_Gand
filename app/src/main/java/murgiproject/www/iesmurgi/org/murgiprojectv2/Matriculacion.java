@@ -11,15 +11,21 @@ import android.widget.TextView;
 
 public class Matriculacion extends AppCompatActivity {
     ImageButton linkSecretaria;
-    TextView link2;
+    ImageButton linkInfo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_matriculacion);
 
 
-        link2 = (TextView)findViewById(R.id.tv_infoMatriculas);
-        link2.setMovementMethod(LinkMovementMethod.getInstance());
+        linkInfo = (ImageButton)findViewById(R.id.masInfo);
+        linkInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.juntadeandalucia.es/temas/estudiar/fp/matriculacion.html"));
+                startActivity(i);
+            }
+        });
 
         linkSecretaria =(ImageButton)findViewById(R.id.img_secretariaVitual);
         linkSecretaria.setOnClickListener(new View.OnClickListener() {

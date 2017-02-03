@@ -28,8 +28,9 @@
     <style name="textoFotos" parent="TextAppearance.AppCompat">
         <item name="android:textAlignment">center</item>
         <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:layout_gravity">center</item>
-        <item name="android:textSize">15dp</item>
+        <item name="android:textSize">18dp</item>
         <!--<item name="android:textColor">@color/Verde9</item>-->
     </style>
 
