@@ -44,10 +44,11 @@
     <string name="title_activity_maps2">Map</string>
 
     <string name="logo_murgi">Ies Murgi</string>
-    <string name="contacto">Contacto</string>
-    <string name="telefono">950481000</string>
+    <string name="contacto">Centro </string>
+
+    <string name="telefono">950 481 000</string>
     <string name="fax">Fax</string>
-    <string name="fax_telefono">950323232</string>
+    <string name="fax_telefono">950 323 232</string>
     <string name="web_dibujo">Web</string>
     <string name="web_enlace">www.iesmurgi.org</string>
     <string name="email">Email</string>
@@ -69,10 +70,8 @@
     <string name="mapa">Mapa</string>
     <string name="cursos">Cursos</string>
     <string name="citas">Cita</string>
-
-
-
-
+    <string name="junta">Información </string>
+    <string name="telefonoJunta">900 848 000</string>
 
 
 </resources>

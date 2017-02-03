@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:text="@string/contacto"
             android:textSize="20sp"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="30dp"
 
             />
@@ -74,11 +74,42 @@
             android:layout_height="wrap_content"
             android:text="@string/telefono"
             android:textSize="20sp"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="30dp"
            />
 
     </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            >
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_telefono"
+                android:layout_marginStart="35dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/junta"
+                android:textSize="20sp"
+                android:layout_marginStart="16dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/telefonoJunta"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                />
+
+        </LinearLayout>
 
 
     <LinearLayout
@@ -101,7 +132,7 @@
             android:layout_height="wrap_content"
             android:text="@string/fax"
             android:textSize="20sp"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="30dp"
             android:layout_weight="1"
             />
@@ -111,7 +142,7 @@
             android:layout_height="wrap_content"
             android:text="@string/fax_telefono"
             android:textSize="20sp"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="45dp"
             android:layout_marginTop="30dp"
             />
 
@@ -136,7 +167,7 @@
             android:layout_height="wrap_content"
             android:text="@string/web_dibujo"
             android:textSize="20sp"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="30dp"
             />
 
@@ -145,7 +176,7 @@
             android:layout_height="wrap_content"
             android:text="@string/web_enlace"
             android:textSize="15sp"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="30dp"
             android:linksClickable="true"
             android:autoLink="web"
@@ -171,7 +202,7 @@
             android:layout_height="wrap_content"
             android:text="@string/email"
             android:textSize="20sp"
-            android:layout_marginStart="35dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="30dp"
             />
 
@@ -180,7 +211,7 @@
             android:layout_height="match_parent"
             android:text="@string/email_escrito"
             android:textSize="12sp"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="10dp"
             android:layout_marginEnd="16dp"
             android:layout_marginTop="30dp"
             />
