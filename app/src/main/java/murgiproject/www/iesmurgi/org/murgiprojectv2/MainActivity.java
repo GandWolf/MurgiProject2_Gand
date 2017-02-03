@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         murgi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               Intent intent = new Intent(getBaseContext(), Historia.class);
+               Intent intent = new Intent(getApplicationContext(), Historia.class);
                startActivity(intent);
             }
         });
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         contacto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), Contacto.class);
+                Intent intent = new Intent(getApplicationContext(), Contacto.class);
                 startActivity(intent);
             }
         });
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         matriculacion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), Matriculacion.class);
+                Intent intent = new Intent(getApplicationContext(), Matriculacion.class);
                 startActivity(intent);
             }
         });
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         mapa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), MapsActivity2.class);
+                Intent intent = new Intent(getApplicationContext(), MapsActivity2.class);
                 startActivity(intent);
             }
         });
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
      curso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), VerCategoriasCursos.class);
+                Intent intent = new Intent(getApplicationContext(), VerCategoriasCursos.class);
                 startActivity(intent);
             }
         });
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         citas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), Citas.class);
+                Intent intent = new Intent(getApplicationContext(), Citas.class);
                 startActivity(intent);
             }
         });
