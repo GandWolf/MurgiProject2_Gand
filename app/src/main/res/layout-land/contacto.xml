@@ -14,7 +14,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/loog_murgi"
+            android:src="@drawable/logo_murgi"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             />

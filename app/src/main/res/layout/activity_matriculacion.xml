@@ -445,7 +445,7 @@
         android:id="@+id/img_secretariaVitual"
         android:layout_gravity="center"
         android:scaleType="centerInside"
-        android:src="@drawable/masinfo"
+        android:src="@drawable/secretariavirtual"
         android:layout_marginEnd="24dp"
             />
 
