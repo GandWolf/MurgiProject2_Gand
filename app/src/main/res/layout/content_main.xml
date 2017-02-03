@@ -78,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-            android:background="@color/Verde10"
+                android:background="@color/Verde10"
                 android:layout_weight="1"
             >
 
@@ -86,8 +86,10 @@
             android:id="@+id/boton_matriculacion"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/Verde10"
             style="@style/botonesFotos"
             android:src="@drawable/matricula_cambio" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -114,6 +116,7 @@
             android:id="@+id/boton_mapa"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/Verde4"
             style="@style/botonesFotos"
             android:src="@drawable/mapa_cambio" />
 
@@ -135,6 +138,7 @@
             android:id="@+id/boton_cursos"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/Verde8"
             style="@style/botonesFotos"
             android:src="@drawable/cursos_cambio"
             />
@@ -155,6 +159,7 @@
         <ImageButton
             android:id="@+id/boton_cita"
             android:layout_width="match_parent"
+            android:background="@color/Verde7"
             android:layout_height="match_parent"
             style="@style/botonesFotos"
             android:src="@drawable/cita_cambio" />
