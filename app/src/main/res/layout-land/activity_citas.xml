@@ -16,25 +16,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tipo_consulta"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintRight_toLeftOf="@+id/spinner"
+        android:layout_marginEnd="8dp" />
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="335dp"
-        android:layout_height="52dp"
+        android:layout_width="340dp"
+        android:layout_height="34dp"
         android:prompt="@string/tipo_consulta"
         android:drawSelectorOnTop="true"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginEnd="16dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginStart="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/texto_version"></Spinner>
+        app:layout_constraintRight_toRightOf="parent"></Spinner>
 
 
     <TextView
@@ -44,22 +42,16 @@
         android:text="@string/nombre_solicitante"
         android:textColor="@color/negro"
         android:textStyle="bold"
-        app:layout_constraintRight_toLeftOf="@+id/editText_Nombre"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        tools:layout_editor_absoluteY="97dp"
+        tools:layout_editor_absoluteX="27dp" />
 
     <EditText
         android:id="@+id/editText_Nombre"
-        android:layout_width="252dp"
-        android:layout_height="wrap_content"
+        android:layout_width="210dp"
+        android:layout_height="27dp"
         android:background="@color/negro"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        tools:layout_editor_absoluteY="90dp"
+        tools:layout_editor_absoluteX="96dp" />
 
     <TextView
         android:id="@+id/textView_Apellido"
@@ -68,22 +60,16 @@
         android:text="@string/apellido_solicitante"
         android:textColor="@color/negro"
         android:textStyle="bold"
-        app:layout_constraintRight_toLeftOf="@+id/editText_Apellido"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView_Nombre" />
+        tools:layout_editor_absoluteY="133dp"
+        tools:layout_editor_absoluteX="27dp" />
 
     <EditText
         android:id="@+id/editText_Apellido"
-        android:layout_width="252dp"
-        android:layout_height="wrap_content"
+        android:layout_width="210dp"
+        android:layout_height="27dp"
         android:background="@color/negro"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/editText_Nombre"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        tools:layout_editor_absoluteY="128dp"
+        tools:layout_editor_absoluteX="96dp" />
 
     <TextView
         android:text="@string/cita"
@@ -95,33 +81,23 @@
         android:id="@+id/cabecera"
         android:enabled="false"
         android:textAlignment="center"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginStart="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="48dp"
-        app:layout_constraintTop_toBottomOf="@+id/editText_Apellido" />
+        tools:layout_editor_absoluteY="64dp"
+        tools:layout_editor_absoluteX="390dp" />
 
     <Button
         android:id="@+id/boton_enviar_consulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/enviar_cita"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="16dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/boton_cancelar_consulta"
-        android:layout_marginEnd="8dp" />
+        tools:layout_editor_absoluteY="218dp"
+        tools:layout_editor_absoluteX="52dp" />
 
     <Button
         android:id="@+id/boton_cancelar_consulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/cancelar_cita"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="64dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        tools:layout_editor_absoluteY="218dp"
+        tools:layout_editor_absoluteX="180dp" />
 
 </android.support.constraint.ConstraintLayout>
