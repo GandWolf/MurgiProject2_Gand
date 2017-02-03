@@ -21,14 +21,7 @@ public class VerCursos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activty_list);
 
-        fab_atras=(FloatingActionButton)findViewById(R.id.fab);
-        fab_atras.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent actividadCursos = new Intent(VerCursos.this, MainActivity.class);
-                startActivity(actividadCursos);
-            }
-        });
+
 
         //nposicion de categoria
         Intent i = getIntent();
@@ -61,7 +54,7 @@ public class VerCursos extends AppCompatActivity {
             cursos.add(new Cursos("Desarrollo de Aplicaciones Multiplataforma","Desarrollando aplicaciones informáticas para la gestión empresarial y de negocio. Desarrollando aplicaciones de propósito general. Desarrollando aplicaciones en el ámbito del entretenimiento y la informática móvil.",R.drawable.fp_dam));
             cursos.add(new Cursos("Desarrollo de Aplicaciones Web"," Desarrollar, implantar, y mantener aplicaciones web, con independencia del modelo empleado y utilizando tecnologías específicas, garantizando el acceso a los datos de forma segura y cumpliendo los criterios de accesibilidad, usabilidad y calidad exigidas en los estándares establecidos. ", R.drawable.fp_daw));
             cursos.add(new Cursos("Administración y Finanzas", " Este profesional ejerce su actividad tanto en grandes como en medianas y pequeñas empresas, en cualquier sector de actividad, y particularmente en el sector servicios, así como en las administraciones públicas, desempeñando las tareas administrativas en la gestión y el asesoramiento en las áreas laboral, comercial, contable y fiscal de dichas empresas e instituciones, ofreciendo un servicio y atención a los clientes y ciudadanos, realizando trámites administrativos con las administraciones públicas y gestionando el archivo y las comunicaciones de la empresa. " , R.drawable.fp_finanzas));
-            cursos.add(new Cursos ("Instalaciones Electrotécnicas" , "Ejercer mi actividad profesional en el sector de la electricidad y la electrónica público y privado, en empresas privadas del sector o creando mi propia empresa." , R.drawable.fp_electronica));
+            cursos.add(new Cursos ("Instalaciones Electrotécnicas" , "Ejercer mi actividad profesional en el sector de la electricidad y la electrónica público y privado, en empresas privadas del sector o creando mi propia empresa." , R.drawable.fp_instalaciones));
         }
 
         if(pos==5){
@@ -80,5 +73,11 @@ public class VerCursos extends AppCompatActivity {
         listView.setAdapter(adapter);
 
 
+    }
+
+
+    public void atras(View v){
+        Intent actividadCursos = new Intent(VerCursos.this, MainActivity.class);
+        startActivity(actividadCursos);
     }
 }
