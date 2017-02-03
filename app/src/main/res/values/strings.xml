@@ -61,9 +61,15 @@
     <string name="Juanjo_email">juanjosecanoasensio@gmail.com</string>
     <string name="Miguel_nombre">Miguel Jódar</string>
     <string name="Miguel_email">jodarsanchezmiguel@gmail.com</string>
-
-
     <string name="webIdiomas">http://www.eoielejido.es</string>
+
+    <string name="historia">Historia</string>
+    <string name="contactos">Contactos</string>
+    <string name="matricula">Matrícula</string>
+    <string name="mapa">Mapa</string>
+    <string name="cursos">Cursos</string>
+    <string name="citas">Cita</string>
+
 
 
 
