@@ -9,6 +9,7 @@
     android:layout_height="wrap_content"
     android:layout_marginStart="24dp"
     android:layout_marginEnd="24dp"
+    android:background="@color/blanco"
     android:orientation="vertical">
 
     <TextView
@@ -433,7 +434,7 @@
         android:id="@+id/img_secretariaVitual"
         android:layout_gravity="center"
         android:scaleType="centerInside"
-        android:src="@drawable/masinfo"
+        android:src="@drawable/secretariavirtual"
         android:layout_marginEnd="90dp"
         />
 
