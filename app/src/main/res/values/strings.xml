@@ -1,5 +1,11 @@
 <resources>
-    <string name="app_name">MurgiProjectV2</string>
+    <string name="app_name">Proyecto IES Murgi </string>
+    <string name="contacto_label">Contacto - Proyecto IES Murgi </string>
+    <string name="matriculacion_label">Matriculación - Proyecto IES Murgi </string>
+    <string name="cursos_label">Cursos - Proyecto IES Murgi </string>
+    <string name="mapa_label">Mapa - Proyecto IES Murgi </string>
+    <string name="historia_label">Historia - Proyecto IES Murgi </string>
+    <string name="cita_label">Cita - Proyecto IES Murgi </string>
 
     <string name="tipo_consulta">Seleccione el tipo de consulta: </string>
     <string name="cita">CITAS: </string>

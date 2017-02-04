@@ -22,12 +22,36 @@
             >
         </activity>
 
-        <activity android:name=".Contacto"></activity>
-        <activity android:name=".Matriculacion"></activity>
-        <activity android:name=".MapsActivity"></activity>
-        <activity android:name=".Historia"></activity>
-        <activity android:name=".Citas"></activity>
-        <activity android:name=".VerCategoriasCursos"></activity>
+        <activity
+            android:name=".Contacto"
+            android:label="@string/contacto_label"
+            ></activity>
+
+        <activity
+            android:name=".Matriculacion"
+            android:label="@string/matriculacion_label"
+            ></activity>
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/mapa_label"
+            ></activity>
+
+        <activity
+            android:name=".Historia"
+            android:label="@string/historia_label"
+            ></activity>
+
+        <activity
+            android:name=".Citas"
+            android:label="@string/cita_label"
+            ></activity>
+
+        <activity
+            android:name=".VerCategoriasCursos"
+            android:label="@string/cursos_label"
+            ></activity>
+
         <activity
             android:name=".SplashActivity"
             android:theme="@style/Theme.Design.NoActionBar"
