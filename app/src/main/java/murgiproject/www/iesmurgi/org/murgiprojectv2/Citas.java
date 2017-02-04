@@ -42,7 +42,6 @@ public class Citas extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 switch(position){
                     case 0:
-                        Toast.makeText(parent.getContext(),"No has seleccionado ninguna opción ", Toast.LENGTH_SHORT ).show();
                         break;
                     case 1:
                         Toast.makeText(parent.getContext(),"Has seleccionado "+parent.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT ).show();
@@ -50,7 +49,6 @@ public class Citas extends AppCompatActivity {
                         break;
 
                     case 2:
-                        //4.4: KitKat
                         Toast.makeText(parent.getContext(),"Has seleccionado "+parent.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT ).show();
                         cabecera.setVisibility(View.VISIBLE);
                         break;
@@ -66,7 +64,6 @@ public class Citas extends AppCompatActivity {
                         break;
 
                     case 5:
-                        //7.0:  Nougat
                         Toast.makeText(parent.getContext(),"Has seleccionado "+parent.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT ).show();
                         cabecera.setVisibility(View.VISIBLE);
                         break;
