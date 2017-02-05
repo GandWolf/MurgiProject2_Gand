@@ -2,7 +2,6 @@ package murgiproject.www.iesmurgi.org.murgiprojectv2;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +15,7 @@ public class VerCursos extends AppCompatActivity {
     ListView listView;
     ArrayList<Cursos> cursos;
     int pos=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +30,7 @@ public class VerCursos extends AppCompatActivity {
             }
         });
 
-        //nposicion de categoriacursos
+        //Posicion de la Categoria Cursos
         Intent i = getIntent();
         Bundle b = i.getExtras();
         pos = b.getInt("pos");
