@@ -29,7 +29,6 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
     TextView edt_fecha;
     TextView edt_hora;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,14 +108,15 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
                         now.get(Calendar.DAY_OF_MONTH)
                 );
 
-
                 Calendar[] days = new Calendar[13];
                 for (int i = -6; i < 7; i++) {
                     Calendar day = Calendar.getInstance();
                     day.add(Calendar.DAY_OF_MONTH, i * 2);
                     days[i + 6] = day;
                 }
-                dpd.setSelectableDays(days);
+
+
+                    dpd.setSelectableDays(days);
 
                 dpd.show(getFragmentManager(), "Datepickerdialog");
 
@@ -131,7 +131,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
                         Citas.this,
                         now1.get(Calendar.HOUR_OF_DAY),
                         now1.get(Calendar.MINUTE),
-                        true
+                        false
                 );
 
                 tpd.vibrate(true);
@@ -169,6 +169,9 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         TimePickerDialog tpd = (TimePickerDialog) getFragmentManager().findFragmentByTag("Timepickerdialog");
         if(tpd != null) tpd.setOnTimeSetListener(this);
     }
+
+
+
 
 
 }
