@@ -1,7 +1,6 @@
 package murgiproject.www.iesmurgi.org.murgiprojectv2;
 
 import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,15 +8,12 @@ import android.widget.ImageButton;
 
 public class VerCategoriasCursos extends AppCompatActivity {
 
-
     ImageButton btn_bachiller, btn_fpBasica, btn_fpMedio, btn_fpSuperior, btn_eoIdiomas;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_categoria_cursos);
-
 
         btn_bachiller = (ImageButton) findViewById(R.id.btn_irBachillerato);
         btn_fpBasica = (ImageButton) findViewById(R.id.btn_irFpBasico);
@@ -40,7 +36,6 @@ public class VerCategoriasCursos extends AppCompatActivity {
                 startActivity(2);
             }
         });
-
 
         btn_fpMedio.setOnClickListener(new View.OnClickListener() {
             @Override
