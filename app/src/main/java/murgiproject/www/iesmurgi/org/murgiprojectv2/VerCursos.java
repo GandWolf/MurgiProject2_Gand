@@ -30,7 +30,7 @@ public class VerCursos extends AppCompatActivity {
             }
         });
 
-        //nposicion de categoria
+        //nposicion de categoriacursos
         Intent i = getIntent();
         Bundle b = i.getExtras();
         pos = b.getInt("pos");

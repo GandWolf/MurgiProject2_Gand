@@ -19,7 +19,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        // Obtenga el SupportMapFragment y se notificará cuando el mapa esté listo para ser utilizado
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -31,10 +31,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
-        LatLng Almeria = new LatLng(36.7817215, -2.815615);
-        mMap.addMarker(new MarkerOptions().position(Almeria).title("Almeria"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Almeria, 17));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(Almeria));
+
+        LatLng iesmurgi = new LatLng(36.7817215, -2.815615);
+        mMap.addMarker(new MarkerOptions().position(iesmurgi).title("IES Murgi"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(iesmurgi, 17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(iesmurgi));
     }
 }
