@@ -16,8 +16,10 @@ import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
+import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD.Usuarios;
 
 
 public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
@@ -28,7 +30,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
     ImageView timeButton;
     TextView edt_fecha;
     TextView edt_hora;
-
+    public static ArrayList<Usuarios>users= new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -143,6 +145,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
                 tpd.show(getFragmentManager(), "Timepickerdialog");
             }
         });
+
 
     }//fin onCreate
 
