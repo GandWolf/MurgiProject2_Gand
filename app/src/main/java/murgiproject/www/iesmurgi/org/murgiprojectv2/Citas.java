@@ -29,6 +29,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
     TextView edt_fecha;
     TextView edt_hora;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
