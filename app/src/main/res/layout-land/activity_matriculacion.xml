@@ -436,6 +436,7 @@
         android:scaleType="centerInside"
         android:src="@drawable/secretariavirtual"
         android:layout_marginEnd="90dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
         />
 
     <ImageView
@@ -445,6 +446,7 @@
         android:layout_gravity="center"
         android:scaleType="centerInside"
         android:src="@drawable/masinfo"
+        android:background="@android:drawable/dialog_holo_light_frame"
         />
     </LinearLayout>
 
