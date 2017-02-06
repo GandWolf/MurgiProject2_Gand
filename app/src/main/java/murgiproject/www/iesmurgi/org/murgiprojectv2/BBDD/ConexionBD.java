@@ -26,27 +26,32 @@ public class ConexionBD extends AsyncTask<String, Void, ResultSet> {
     }
 
     @Override
-    protected void onPostExecute(ResultSet resultSet) {
-       try {
-           int cont = 0;
-           while (resultSet.next()) {
-               Usuarios aux = new Usuarios(resultSet.getString(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4));
-               Citas.users.add(aux);
-               cont++;
-           }
-           if (cont == 0) {
-               progressdialog.dismiss();
-               Toast.makeText(activity, "No hay datos", Toast.LENGTH_SHORT).show();
-           }
-           progressdialog.dismiss();
-       }catch (Exception ex){
-           progressdialog.dismiss();
-       }
+    protected void onPostExecute(ResultSet result) {
+        try {
+            if (result != null){
+                if (!result.next()) {
+                    Toast toast = Toast.makeText(activity,"No existen resultados con ese nombre",Toast.LENGTH_LONG);
+                    toast.show();
+                }else{
+
+                    Toast toast = Toast.makeText(activity,result.getString("apellidos"),Toast.LENGTH_LONG);
+                    toast.show();
+                }
+            }else{
+                Toast toast = Toast.makeText(activity,"consulta no está",Toast.LENGTH_LONG);
+                toast.show();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
+
+
 
     @Override
     protected ResultSet doInBackground(String... strings) {
-        ID=strings[0];
+
         try {
             Connection conn;
             Class.forName("com.mysql.jdbc.Driver");
@@ -55,7 +60,7 @@ public class ConexionBD extends AsyncTask<String, Void, ResultSet> {
 
             conn = (Connection) DriverManager.getConnection("jdbc:mysql://"+rutaINI+"/base20172", "ubase20172", "pbase20172");
             Statement estado = (Statement) conn.createStatement();
-            String peticion = "select * from "+strings[0]+" order by apellidos";
+            String peticion = "select * from "+strings[0]+" where id_user='2'";
             ResultSet result = estado.executeQuery(peticion);
             return result;
         } catch (SQLException e) {

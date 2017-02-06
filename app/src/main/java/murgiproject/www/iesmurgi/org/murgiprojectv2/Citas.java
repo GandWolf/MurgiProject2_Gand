@@ -3,12 +3,14 @@ package murgiproject.www.iesmurgi.org.murgiprojectv2;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -22,6 +24,8 @@ import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD.ConexionBD;
+import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD.InsertarDatos;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD.Usuarios;
 
 
@@ -32,6 +36,8 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
     ImageView dateButton, timeButton;
     TextView edt_fecha, edt_hora;
     Button enviar, cancelar;
+    EditText nombre , apellidos;
+    String asunto="";
 
     public static ArrayList<Usuarios>users= new ArrayList<>();
     @Override
@@ -45,6 +51,8 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         edt_hora = (TextView) findViewById(R.id.edt_hora);
         enviar = (Button) findViewById(R.id.boton_enviar_consulta);
         cancelar = (Button)findViewById(R.id.boton_cancelar_consulta);
+        nombre= (EditText)findViewById(R.id.editText_Nombre);
+        apellidos=(EditText)findViewById(R.id.editText_Apellido);
 
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         final TextView cabecera = (TextView) findViewById(R.id.cabecera);
@@ -72,27 +80,28 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
                     case 1:
                         Toast.makeText(parent.getContext(), "Has seleccionado " + parent.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show();
                         cabecera.setVisibility(View.VISIBLE);
+                        asunto="matriculacion";
                         break;
 
                     case 2:
                         Toast.makeText(parent.getContext(), "Has seleccionado " + parent.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show();
                         cabecera.setVisibility(View.VISIBLE);
+                        asunto="solicitud de certificados";
                         break;
 
                     case 3:
                         Toast.makeText(parent.getContext(), "Has seleccionado " + parent.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show();
                         cabecera.setVisibility(View.VISIBLE);
+                        asunto="informacion oferta educativa";
                         break;
 
                     case 4:
                         Toast.makeText(parent.getContext(), "Has seleccionado " + parent.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show();
                         cabecera.setVisibility(View.VISIBLE);
+                        asunto="otros";
                         break;
 
-                    case 5:
-                        Toast.makeText(parent.getContext(), "Has seleccionado " + parent.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show();
-                        cabecera.setVisibility(View.VISIBLE);
-                        break;
+
                 }
             }
 
@@ -201,6 +210,9 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Toast.makeText(getApplicationContext(), "Van a ser enviados a la BBDD", Toast.LENGTH_SHORT).show();
+                        new InsertarDatos(Citas.this,nombre.getText().toString(),apellidos.getText().toString(),asunto).execute();
+
+                        // new ConexionBD(Citas.this).execute("usuarios");
                     }
                 });
 

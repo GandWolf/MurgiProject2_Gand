@@ -2,10 +2,10 @@ apply plugin: 'com.android.application'
 
 android {
     signingConfigs {
-         /*  debug {
+          /* debug {
             keyAlias 'iesmurgi'
             keyPassword '123456'
-            storeFile file('/home/luis/pruena')
+            storeFile file('/home/usuario/pruena')
             storePassword '123456'
         }*/
     }
