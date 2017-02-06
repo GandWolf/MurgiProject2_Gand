@@ -439,7 +439,6 @@
     android:layout_gravity="center"
     >
 
-
     <ImageView
         android:layout_width="0dp"
         android:layout_height="120dp"
@@ -462,8 +461,6 @@
         android:src="@drawable/masinfo"
         android:background="@android:drawable/picture_frame"
         />
-
-
 </LinearLayout>
 
 </LinearLayout>

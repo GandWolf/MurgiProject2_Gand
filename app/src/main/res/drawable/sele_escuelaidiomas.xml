@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="true"
-        android:drawable="@drawable/escuela_idiomas_focus" /> <!-- Presionado -->
-    <item android:state_focused="true"
-        android:drawable="@drawable/escuela_idiomas_focus" /> <!-- Seleccionado -->
-    <item android:drawable="@drawable/escuela_idiomas" /> <!-- Por Defecto -->
-</selector>

@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="@drawable/portada">
-        <!--cambiar l aposicion del texto-->
+        <!--cambiar la posicion del texto-->
            <TextView
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
                style="@style/textoInicio"
                android:textSize="40dp"/>
     </RelativeLayout>
-    <!--cambiar el color d elos botones y el dibujo que tiene-->
+    <!--cambiar el color de los botones y el dibujo que tiene-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

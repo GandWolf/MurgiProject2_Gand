@@ -84,8 +84,5 @@
         android:elevation="20dp"
         tools:targetApi="lollipop" />
 
-
-
-
 </LinearLayout>
 </ScrollView>
