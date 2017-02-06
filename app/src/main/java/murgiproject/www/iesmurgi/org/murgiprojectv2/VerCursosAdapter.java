@@ -2,9 +2,7 @@ package murgiproject.www.iesmurgi.org.murgiprojectv2;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,19 +12,14 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by usuario on 1/02/17.
- */
-
 public class VerCursosAdapter extends ArrayAdapter<Cursos> {
 
 
+    ArrayList<Cursos> cursos;
 
-    ArrayList<Cursos>cursos;
-
-    VerCursosAdapter(Activity context , ArrayList<Cursos>cur){
+    VerCursosAdapter(Activity context, ArrayList<Cursos> cur) {
         super(context, 0, cur);
-        this.cursos=cur;
+        this.cursos = cur;
     }
 
     @NonNull
@@ -34,18 +27,16 @@ public class VerCursosAdapter extends ArrayAdapter<Cursos> {
     public View getView(int i, View vista, ViewGroup vistagrupo) {
 
 
-        if(vista==null){
+        if (vista == null) {
             Context cnt = vistagrupo.getContext();
-            vista= LayoutInflater.from(cnt).inflate(R.layout.esqueleto_ver_cursos,null);
+            vista = LayoutInflater.from(cnt).inflate(R.layout.esqueleto_ver_cursos, null);
         }
 
 
-
-        final Cursos mCurso=cursos.get(i);
-        TextView titulo=(TextView)vista.findViewById(R.id.tv_titulo);
-        TextView descripcion =(TextView)vista.findViewById(R.id.tv_descripcion);
-        ImageView imagen =(ImageView)vista.findViewById(R.id.iv_portada);
-
+        final Cursos mCurso = cursos.get(i);
+        TextView titulo = (TextView) vista.findViewById(R.id.tv_titulo);
+        TextView descripcion = (TextView) vista.findViewById(R.id.tv_descripcion);
+        ImageView imagen = (ImageView) vista.findViewById(R.id.iv_portada);
 
 
         titulo.setText(mCurso.getTitulo());

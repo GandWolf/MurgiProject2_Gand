@@ -1,5 +1,11 @@
 <resources>
-    <string name="app_name">MurgiProjectV2</string>
+    <string name="app_name">Proyecto IES Murgi </string>
+    <string name="contacto_label">Contacto - Proyecto IES Murgi </string>
+    <string name="matriculacion_label">Matriculación - Proyecto IES Murgi </string>
+    <string name="cursos_label">Cursos - Proyecto IES Murgi </string>
+    <string name="mapa_label">Mapa - Proyecto IES Murgi </string>
+    <string name="historia_label">Historia - Proyecto IES Murgi </string>
+    <string name="cita_label">Cita - Proyecto IES Murgi </string>
 
     <string name="tipo_consulta">Seleccione el tipo de consulta: </string>
     <string name="cita">CITAS: </string>
@@ -44,10 +50,11 @@
     <string name="title_activity_maps2">Map</string>
 
     <string name="logo_murgi">Ies Murgi</string>
-    <string name="contacto">Contacto</string>
-    <string name="telefono">950481000</string>
+    <string name="contacto">Centro </string>
+
+    <string name="telefono">950 481 000</string>
     <string name="fax">Fax</string>
-    <string name="fax_telefono">950323232</string>
+    <string name="fax_telefono">950 323 232</string>
     <string name="web_dibujo">Web</string>
     <string name="web_enlace">www.iesmurgi.org</string>
     <string name="email">Email</string>
@@ -69,10 +76,8 @@
     <string name="mapa">Mapa</string>
     <string name="cursos">Cursos</string>
     <string name="citas">Cita</string>
-
-
-
-
+    <string name="junta">Información </string>
+    <string name="telefonoJunta">900 848 000</string>
 
 
 </resources>

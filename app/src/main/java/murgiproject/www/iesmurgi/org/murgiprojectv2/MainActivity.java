@@ -5,8 +5,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,41 +16,32 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.content_main);
 
 
-        ImageButton murgi = (ImageButton)findViewById(R.id.boton_ies_murgi);
-        ImageButton contacto = (ImageButton)findViewById(R.id.boton_contacto);
-        ImageButton matriculacion = (ImageButton)findViewById(R.id.boton_matriculacion);
-        ImageButton mapa= (ImageButton)findViewById(R.id.boton_mapa);
-        ImageButton curso= (ImageButton)findViewById(R.id.boton_cursos);
-        ImageButton citas= (ImageButton)findViewById(R.id.boton_cita);
+        LinearLayout iesmurgi = (LinearLayout) findViewById(R.id.ir_iesMurgi);
+        LinearLayout contacto = (LinearLayout) findViewById(R.id.boton_contacto);
+        LinearLayout matriculacion = (LinearLayout) findViewById(R.id.boton_matriculacion);
+        LinearLayout mapa = (LinearLayout) findViewById(R.id.boton_mapa);
+        LinearLayout curso = (LinearLayout) findViewById(R.id.boton_cursos);
+        LinearLayout citas = (LinearLayout) findViewById(R.id.boton_cita);
 
-
-
-        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
-
-
-        //Temporal
-        TextView titulo_splash= (TextView)findViewById(R.id.textoInicio);
-        Typeface face= Typeface.createFromAsset(getAssets(),"font/letra.TTF"); //Llamamos a la fuente no incluida en Android
+        //Llamamos a la fuente no incluida en Android
+        TextView titulo_splash = (TextView) findViewById(R.id.textoInicio);
+        Typeface face = Typeface.createFromAsset(getAssets(), "font/letra.TTF");
         titulo_splash.setTypeface(face);
-        murgi.setOnClickListener(new View.OnClickListener() {
+
+
+        iesmurgi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               Intent intent = new Intent(getBaseContext(), Historia.class);
-               startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), Historia.class);
+                startActivity(intent);
             }
         });
+
 
         contacto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), Contacto.class);
+                Intent intent = new Intent(getApplicationContext(), Contacto.class);
                 startActivity(intent);
             }
         });
@@ -59,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         matriculacion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), Matriculacion.class);
+                Intent intent = new Intent(getApplicationContext(), Matriculacion.class);
                 startActivity(intent);
             }
         });
@@ -67,15 +57,15 @@ public class MainActivity extends AppCompatActivity {
         mapa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), MapsActivity2.class);
+                Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
                 startActivity(intent);
             }
         });
 
-     curso.setOnClickListener(new View.OnClickListener() {
+        curso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), VerCategoriasCursos.class);
+                Intent intent = new Intent(getApplicationContext(), VerCategoriasCursos.class);
                 startActivity(intent);
             }
         });
@@ -83,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         citas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), Citas.class);
+                Intent intent = new Intent(getApplicationContext(), Citas.class);
                 startActivity(intent);
             }
         });

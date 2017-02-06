@@ -1,13 +1,9 @@
 package murgiproject.www.iesmurgi.org.murgiprojectv2;
 
-/**
- * Created by usuario on 31/01/17.
- */
 
 public class Cursos {
 
-
-    private String titulo , descripcion ;
+    private String titulo, descripcion ;
     private int imagen;
 
 
@@ -17,7 +13,6 @@ public class Cursos {
 
         this.imagen = imagen;
     }
-
 
     public String getTitulo() {
         return titulo;

@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="#FFFFFF"
-    >
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:src="@drawable/loog_murgi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            />
+            android:src="@drawable/logo_murgi" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -26,256 +23,272 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/txt_murgi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/logo_murgi"
                 android:textSize="40sp"
-                android:id="@+id/txt_murgi"
 
                 />
 
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            android:layout_weight="1"
-            >
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:src="@drawable/ic_telefono"
-                    android:layout_marginStart="35dp"
-                    android:layout_marginTop="30dp"
-
-                    />
-
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/contacto"
-                    android:textSize="20sp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
 
-                    />
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="35dp"
+                        android:src="@drawable/ic_telefono" />
 
-                <TextView
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:text="@string/contacto"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="105dp"
+                        android:text="@string/telefono"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/telefono"
-                    android:textSize="20sp"
-                    android:layout_marginStart="25dp"
                     android:layout_marginTop="30dp"
-                    />
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="35dp"
+                        android:src="@drawable/ic_telefono" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:text="@string/junta"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:text="@string/telefonoJunta"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/fax" />
+
+                    <TextView
+                        android:layout_width="78dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_weight="1"
+                        android:text="@string/fax"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="85dp"
+                        android:text="@string/fax_telefono"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/web" />
+
+                    <TextView
+                        android:layout_width="78dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/web_dibujo"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="45dp"
+                        android:layout_marginTop="30dp"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        android:text="@string/web_enlace"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/ic_mail" />
+
+                    <TextView
+                        android:layout_width="78dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/email"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/email_escrito"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
 
             </LinearLayout>
-
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
-
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/fax"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_weight="1"
-                    />
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginEnd="24dp"
+                android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="78dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/fax"
-                    android:textSize="20sp"
                     android:layout_marginStart="40dp"
                     android:layout_marginTop="30dp"
-                    android:layout_weight="1"
+                    android:text="@string/desarrollada"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/Luis_nombre"
+                    android:textSize="20sp"
+
                     />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/fax_telefono"
-                    android:textSize="20sp"
-                    android:layout_marginStart="25dp"
-                    android:layout_marginTop="30dp"
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
-
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/web"
                     android:layout_marginStart="40dp"
-                    android:layout_marginTop="30dp"
-                    />
-
-                <TextView
-                    android:layout_width="78dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/web_dibujo"
+                    android:text="@string/Luis_email"
                     android:textSize="20sp"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="30dp"
+
                     />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/web_enlace"
-                    android:textSize="15sp"
-                    android:layout_marginStart="25dp"
-                    android:layout_marginTop="30dp"
-                    android:linksClickable="true"
-                    android:autoLink="web"
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:src="@drawable/ic_mail"
-                    android:layout_marginStart="35dp"
-                    android:layout_marginTop="30dp"
-                    />
-
-                <TextView
-                    android:layout_width="78dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/email"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/chema_nombre"
                     android:textSize="20sp"
-                    android:layout_marginStart="35dp"
-                    android:layout_marginTop="30dp"
+
                     />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="@string/email_escrito"
-                    android:textSize="12sp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/chema_email"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/Juanjo_nombre"
+                    android:textSize="20sp"
+
                     />
 
-            </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/Juanjo_email"
+                    android:textSize="20sp"
 
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/Miguel_nombre"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/Miguel_email"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="30dp"
-                android:text="@string/desarrollada"
-                android:textSize="20sp"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Luis_nombre"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="10dp"
-
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Luis_email"
-                android:layout_marginStart="40dp"
-
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/chema_nombre"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="20dp"
-
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/chema_email"
-                android:layout_marginStart="40dp"
-
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Juanjo_nombre"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="20dp"
-
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Juanjo_email"
-                android:layout_marginStart="40dp"
-
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Miguel_nombre"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="20dp"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Miguel_email"
-                android:layout_marginStart="40dp"
-                android:layout_marginBottom="20dp"
-                />
-
-
-        </LinearLayout>
-
-
-
-
-
     </LinearLayout>
 </ScrollView>

@@ -32,10 +32,10 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:background="@color/Verde9"
+            android:id="@+id/ir_iesMurgi"
             android:layout_weight="1">
 
-        <ImageButton
-            android:id="@+id/boton_ies_murgi"
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             style="@style/botonesFotos"
@@ -56,10 +56,11 @@
             android:orientation="vertical"
             android:background="@color/Verde7"
             android:layout_weight="1"
+            android:id="@+id/boton_contacto"
             >
 
-        <ImageButton
-            android:id="@+id/boton_contacto"
+        <ImageView
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             style="@style/botonesFotos"
@@ -79,10 +80,11 @@
                 android:orientation="vertical"
                 android:background="@color/Verde10"
                 android:layout_weight="1"
+            android:id="@+id/boton_matriculacion"
             >
 
-        <ImageButton
-            android:id="@+id/boton_matriculacion"
+        <ImageView
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/Verde10"
@@ -110,9 +112,9 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:background="@color/Verde4"
-            android:layout_weight="1">
-        <ImageButton
             android:id="@+id/boton_mapa"
+            android:layout_weight="1">
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/Verde4"
@@ -132,9 +134,10 @@
                 android:orientation="vertical"
                 android:background="@color/Verde8"
                 android:layout_weight="1"
+                android:id="@+id/boton_cursos"
                 >
-        <ImageButton
-            android:id="@+id/boton_cursos"
+        <ImageView
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/Verde8"
@@ -154,9 +157,9 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:background="@color/Verde7"
+                    android:id="@+id/boton_cita"
                     android:layout_weight="1">
-        <ImageButton
-            android:id="@+id/boton_cita"
+        <ImageView
             android:layout_width="match_parent"
             android:background="@color/Verde7"
             android:layout_height="match_parent"
@@ -166,7 +169,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/textoFotos"
-                        android:text="@string/citas"                        />
+                        android:text="@string/citas"            />
                 </LinearLayout>
 
     </LinearLayout>
