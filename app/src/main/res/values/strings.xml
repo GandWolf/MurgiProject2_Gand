@@ -23,8 +23,6 @@
     <string name="historia_texto_localizacion">Av. Príncipes de España, 17, 04700 El Ejido, Almería. </string>
 
 
-    <string name="infoAndalucia"><a href="http://www.juntadeandalucia.es/temas/estudiar/fp/matriculacion.html">Más info</a></string>
-
     <string name="fpBasicaTitulo">Ciclos de Formación Profesional Básica</string>
     <string name="fpbasica1">Para acceder a los Ciclos Formativos de formacion básica será necesario reunir alguno de los requisitos académicos siguientes:</string>
     <string name="fpbasica2">Tener 15 años cumplidos, o cumplirlos durante el año natural en curso, y no superar los 17 años de edad en el momento del acceso o durante el año natural en curso. </string>
@@ -46,8 +44,6 @@
     <string name="fpsuperio5">Haber obtenido una titulación universitaria o equivalente.</string>
     <string name="fpsuperio6">Si no cumples alguno de estos requisitos puedes presentarte a una prueba de acceso que se convoca todos los años, normalmente en junio o también puede que en septiembre.</string>
     <string name="requisitos_para_acceder">Admisión y matriculación:</string>
-    <string name="linkSecretariaVitual">https://www.juntadeandalucia.es/educacion/secretariavirtual/ </string>
-    <string name="title_activity_maps2">Map</string>
 
     <string name="logo_murgi">Ies Murgi</string>
     <string name="contacto">Centro </string>
@@ -68,7 +64,6 @@
     <string name="Juanjo_email">juanjosecanoasensio@gmail.com</string>
     <string name="Miguel_nombre">Miguel Jódar</string>
     <string name="Miguel_email">jodarsanchezmiguel@gmail.com</string>
-    <string name="webIdiomas">http://www.eoielejido.es</string>
 
     <string name="historia">Historia</string>
     <string name="contactos">Contactos</string>
