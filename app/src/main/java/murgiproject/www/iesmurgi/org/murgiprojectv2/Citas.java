@@ -1,6 +1,8 @@
 package murgiproject.www.iesmurgi.org.murgiprojectv2;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -26,10 +28,10 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
 
     Spinner spinner;
     TextView cabecera;
-    ImageView dateButton;
-    ImageView timeButton;
-    TextView edt_fecha;
-    TextView edt_hora;
+    ImageView dateButton, timeButton;
+    TextView edt_fecha, edt_hora;
+    Button enviar, cancelar;
+
     public static ArrayList<Usuarios>users= new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +42,8 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         timeButton = (ImageView) findViewById(R.id.btn_reloj);
         edt_fecha = (TextView) findViewById(R.id.edt_fecha);
         edt_hora = (TextView) findViewById(R.id.edt_hora);
-
-
+        enviar = (Button) findViewById(R.id.boton_enviar_consulta);
+        cancelar = (Button)findViewById(R.id.boton_cancelar_consulta);
 
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         final TextView cabecera = (TextView) findViewById(R.id.cabecera);
@@ -146,6 +148,13 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
             }
         });
 
+        enviar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog();
+            }
+        });
+
 
     }//fin onCreate
 
@@ -173,10 +182,34 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         if(tpd != null) tpd.setOnTimeSetListener(this);
     }
 
+    public void showDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Citas.this);
+        builder.setTitle("Solicitud de cita Secretaria");
 
+        builder.setMessage("Revise sus datos antes de enviarlos....¿Desea enviarlos?");
 
+        String positiveText = getString(android.R.string.ok);
+        builder.setPositiveButton(positiveText,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getApplicationContext(), "Van a ser enviados a la BBDD", Toast.LENGTH_SHORT).show();
+                    }
+                });
 
+        String negativeText = getString(android.R.string.cancel);
+        builder.setNegativeButton(negativeText,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getApplicationContext(), "No vas a enviar nada", Toast.LENGTH_SHORT).show();
+                    }
+                });
 
+        AlertDialog dialog = builder.create();
+        // display dialog
+        dialog.show();
+    }
 }
 
 
