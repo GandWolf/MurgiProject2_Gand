@@ -1,6 +1,7 @@
 package murgiproject.www.iesmurgi.org.murgiprojectv2;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -151,10 +152,16 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         enviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog();
+                dialogoEnviar();
             }
         });
 
+        cancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialogoCancelar();
+            }
+        });
 
     }//fin onCreate
 
@@ -182,7 +189,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         if(tpd != null) tpd.setOnTimeSetListener(this);
     }
 
-    public void showDialog() {
+    public void dialogoEnviar() {
         AlertDialog.Builder builder = new AlertDialog.Builder(Citas.this);
         builder.setTitle("Solicitud de cita Secretaria");
 
@@ -207,7 +214,36 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
                 });
 
         AlertDialog dialog = builder.create();
-        // display dialog
+        dialog.show();
+    }
+
+
+    public void dialogoCancelar() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Citas.this);
+        builder.setTitle("Solicitud de cita Secretaria");
+
+        builder.setMessage("¿Desea salir de la solicitud de citas? Sus datos serán eliminados");
+
+        String positiveText = getString(android.R.string.ok);
+        builder.setPositiveButton(positiveText,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
+                    }
+                });
+
+        String negativeText = getString(android.R.string.cancel);
+        builder.setNegativeButton(negativeText,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getApplicationContext(), "Vas a permanecer en la activity", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+        AlertDialog dialog = builder.create();
         dialog.show();
     }
 }
