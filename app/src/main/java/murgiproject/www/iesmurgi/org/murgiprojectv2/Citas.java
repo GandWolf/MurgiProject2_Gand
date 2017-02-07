@@ -1,11 +1,9 @@
 package murgiproject.www.iesmurgi.org.murgiprojectv2;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
+
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
@@ -15,7 +13,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -48,27 +45,12 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
     private String asunto;
     private String fecha, hora;
 
-
-
     public static ArrayList<Usuarios> users = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_citas);
-
-        ConnectivityManager connManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-
-        NetworkInfo mWifi = connManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-        NetworkInfo mData = connManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
-
-        if (mWifi.isConnected() || mData.isConnected()) {
-            Toast.makeText(getApplicationContext(), "Wifi SI está activado ", Toast.LENGTH_SHORT).show();
-        }
-
-        else if (mData.isConnected()==false){
-            Toast.makeText(getApplicationContext(), "NO HAY DATOS ", Toast.LENGTH_SHORT).show();
-        }
 
         asunto="";
         dateButton = (ImageView) findViewById(R.id.btn_calendar);
@@ -84,6 +66,24 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         final TextView cabecera = (TextView) findViewById(R.id.cabecera);
 
         cabecera.setVisibility(View.INVISIBLE);
+
+
+
+        ConnectivityManager manager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+
+        //Comprobación de conexión de datos
+        boolean isData = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE)
+                .isConnectedOrConnecting();
+
+        //omprobación de conexión de WiFi
+        boolean isWifi = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI)
+                .isConnectedOrConnecting();
+
+
+        if (!isData && !isWifi)  {
+            Snackbar.make(findViewById(android.R.id.content), "Por favor, revise su conexión a Internet", Snackbar.LENGTH_LONG).show();
+            enviar.setEnabled(false);
+        }
 
         //Crearnos una adaptador para volcar los datos
 
@@ -126,8 +126,6 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
                         cabecera.setVisibility(View.VISIBLE);
                         asunto = "otros";
                         break;
-
-
                 }
             }
 
