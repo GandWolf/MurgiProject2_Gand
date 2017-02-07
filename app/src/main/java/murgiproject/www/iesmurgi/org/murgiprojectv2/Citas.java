@@ -5,10 +5,14 @@ import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.format.Formatter;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -23,6 +27,8 @@ import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
+import java.net.InetAddress;
+import java.net.NetworkInterface;
 import java.sql.Time;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -30,6 +36,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Enumeration;
 
 import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD.ConexionBD;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD.InsertarDatos;
@@ -55,7 +62,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_citas);
 
-        asunto="";
+        asunto = "";
         dateButton = (ImageView) findViewById(R.id.btn_calendar);
         timeButton = (ImageView) findViewById(R.id.btn_reloj);
         edt_fecha = (TextView) findViewById(R.id.edt_fecha);
@@ -68,7 +75,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         final TextView cabecera = (TextView) findViewById(R.id.cabecera);
 
-        compruebaInternet ();
+        compruebaInternet();
 
         cabecera.setVisibility(View.INVISIBLE);
 
@@ -125,7 +132,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         dateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                compruebaInternet ();
+                compruebaInternet();
                 Calendar now = Calendar.getInstance();
                 DatePickerDialog dpd = DatePickerDialog.newInstance(
                         Citas.this,
@@ -152,7 +159,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         timeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                compruebaInternet ();
+                compruebaInternet();
                 Calendar now1 = Calendar.getInstance();
                 TimePickerDialog tpd = TimePickerDialog.newInstance(
                         Citas.this,
@@ -176,10 +183,10 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
             @Override
             public void onClick(View view) {
 
-                if(nombre.getText().toString().isEmpty() || apellidos.getText().toString().isEmpty() || edt_fecha.getText().toString().isEmpty() || edt_hora.getText().toString().isEmpty() || asunto.equals("")){
+                if (nombre.getText().toString().isEmpty() || apellidos.getText().toString().isEmpty() || edt_fecha.getText().toString().isEmpty() || edt_hora.getText().toString().isEmpty() || asunto.equals("")) {
                     Snackbar.make(findViewById(android.R.id.content), "Error!! Inserte todos los datos", Snackbar.LENGTH_SHORT).show();
 
-                }else{
+                } else {
                     dialogoEnviar();
                 }
 
@@ -199,17 +206,17 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
 
     @Override
     public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
-        Date fec=null;
+        Date fec = null;
         String date = "Fecha seleccionada " + dayOfMonth + "/" + (monthOfYear + 1) + "/" + year;
         edt_fecha.setText(date);
         @SuppressLint("SimpleDateFormat") SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
-        String dat = year +"-"+(monthOfYear + 1) + "-"  +dayOfMonth;
+        String dat = year + "-" + (monthOfYear + 1) + "-" + dayOfMonth;
         try {
-            fec=dt.parse(dat);
+            fec = dt.parse(dat);
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        fecha=dt.format(fec);
+        fecha = dt.format(fec);
 
 
     }
@@ -219,14 +226,15 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
     public void onTimeSet(TimePickerDialog view, int hourOfDay, int minute, int second) {
         String time = "Hora seleccionada: " + hourOfDay + "h" + minute + "m" + second;
         edt_hora.setText(time);
-        String h = hourOfDay + ":" + minute + ":" + second+0;
-        hora=h;
+        String h = hourOfDay + ":" + minute + ":" + second + 0;
+        hora = h;
+        //comprueba que la cita esté libre
         new ConexionBD(Citas.this).execute();
-        for (int i=0 ; i<datosHora.size();i++){
-            if (datosHora.get(i).equals(hora) && datosFecha.get(i).equals(fecha)){
+        for (int i = 0; i < datosHora.size(); i++) {
+            if (datosHora.get(i).equals(hora) && datosFecha.get(i).equals(fecha)) {
                 Snackbar.make(findViewById(android.R.id.content), "Error!! Seleccione otra fecha", Snackbar.LENGTH_LONG).show();
                 enviar.setEnabled(false);
-            }else{
+            } else {
                 enviar.setEnabled(true);
             }
 
@@ -256,8 +264,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
-
-
+                        //insertar datos de cita
                         new InsertarDatos(Citas.this, nombre.getText().toString(), apellidos.getText().toString(), asunto, fecha, hora).execute();
                         Snackbar.make(findViewById(android.R.id.content), "Cita elegida correctamente", Snackbar.LENGTH_LONG).show();
 
@@ -307,7 +314,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         dialog.show();
     }
 
-    public void compruebaInternet () {
+    public void compruebaInternet() {
         ConnectivityManager manager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
 
         //Comprobación de conexión de datos
@@ -322,11 +329,15 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         if (!isData && !isWifi) {
             Snackbar.make(findViewById(android.R.id.content), "Por favor, revise su conexión a Internet", Snackbar.LENGTH_LONG).show();
             enviar.setEnabled(false);
-        }
-        else {
+        } else {
             enviar.setEnabled(true);
         }
     }
+
+
+
+
+
 }
 
 
