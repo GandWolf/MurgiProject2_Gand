@@ -74,7 +74,7 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/escuela_idiomas"
+        android:src="@drawable/sele_escuelaidiomas"
         android:id="@+id/btn_irEscuelaIdiomas"
         android:layout_marginBottom="60dp"
         android:scaleType="centerInside"
