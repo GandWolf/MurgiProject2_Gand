@@ -58,14 +58,16 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         setContentView(R.layout.activity_citas);
 
         ConnectivityManager connManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo mWifi = connManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
 
-        if (mWifi.isConnected()) {
+        NetworkInfo mWifi = connManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        NetworkInfo mData = connManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+
+        if (mWifi.isConnected() || mData.isConnected()) {
             Toast.makeText(getApplicationContext(), "Wifi SI está activado ", Toast.LENGTH_SHORT).show();
         }
 
-        else {
-            Toast.makeText(getApplicationContext(), "Wifi NO está activado ", Toast.LENGTH_SHORT).show();
+        else if (mData.isConnected()==false){
+            Toast.makeText(getApplicationContext(), "NO HAY DATOS ", Toast.LENGTH_SHORT).show();
         }
 
         asunto="";
