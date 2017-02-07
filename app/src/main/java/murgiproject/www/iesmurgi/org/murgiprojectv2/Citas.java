@@ -46,7 +46,8 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
     private String fecha, hora;
     public boolean isData, isWifi;
 
-    public static ArrayList<Usuarios> users = new ArrayList<>();
+    public static ArrayList<String> datosFecha = new ArrayList<>();
+    public static ArrayList<String> datosHora = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -163,21 +164,30 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
 
                 tpd.enableSeconds(false);
 
-                tpd.setTimeInterval(1, 10, 1);
+                tpd.setTimeInterval(1, 10, 60);
 
                 tpd.show(getFragmentManager(), "Timepickerdialog");
             }
         });
 
+
         enviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                new ConexionBD(Citas.this).execute();
+                for (int i=0 ; i<datosHora.size();i++){
+                    //Toast.makeText(getApplicationContext(),datosFecha.get(i),Toast.LENGTH_SHORT).show();
+                    if (datosHora.get(i).equals("17:20:00") && datosFecha.get(i).equals("2017-02-09")){
+                        Snackbar.make(findViewById(android.R.id.content), "Error!! Seleccione otra fecha", Snackbar.LENGTH_SHORT).show();
+                    }
 
-                if(nombre.getText().toString().isEmpty() || apellidos.getText().toString().isEmpty() || edt_fecha.getText().toString().isEmpty() || edt_hora.getText().toString().isEmpty() || asunto.equals("")){
-                    Snackbar.make(findViewById(android.R.id.content), "Error!! Inserte todos los datos", Snackbar.LENGTH_SHORT).show();
-                }else{
-                    dialogoEnviar();
                 }
+//                if(nombre.getText().toString().isEmpty() || apellidos.getText().toString().isEmpty() || edt_fecha.getText().toString().isEmpty() || edt_hora.getText().toString().isEmpty() || asunto.equals("")){
+//                    Snackbar.make(findViewById(android.R.id.content), "Error!! Inserte todos los datos", Snackbar.LENGTH_SHORT).show();
+//
+//                }else{
+//                    dialogoEnviar();
+//                }
 
 
             }
@@ -197,7 +207,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
     public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
         String date = "Fecha seleccionada " + dayOfMonth + "/" + (monthOfYear + 1) + "/" + year;
         edt_fecha.setText(date);
-        String dat = year +"/"+ (monthOfYear + 1) + "/" + dayOfMonth;
+        String dat = year +"-"+ (monthOfYear + 1) + "-" + dayOfMonth;
         fecha=dat;
 
 
@@ -239,7 +249,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
 
                         new InsertarDatos(Citas.this, nombre.getText().toString(), apellidos.getText().toString(), asunto, fecha, hora).execute();
                         Snackbar.make(findViewById(android.R.id.content), "Cita elegida correctamente", Snackbar.LENGTH_SHORT).show();
-                        // new ConexionBD(Citas.this).execute("usuarios");
+
                     }
                 });
 

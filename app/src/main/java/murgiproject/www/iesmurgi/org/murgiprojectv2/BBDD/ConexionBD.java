@@ -14,6 +14,10 @@ import java.sql.SQLException;
 
 import murgiproject.www.iesmurgi.org.murgiprojectv2.Citas;
 
+import static murgiproject.www.iesmurgi.org.murgiprojectv2.Citas.datosFecha;
+import static murgiproject.www.iesmurgi.org.murgiprojectv2.Citas.datosHora;
+
+
 
 public class ConexionBD extends AsyncTask<String, Void, ResultSet> {
 
@@ -32,9 +36,12 @@ public class ConexionBD extends AsyncTask<String, Void, ResultSet> {
                     Toast toast = Toast.makeText(activity,"No existen resultados con ese nombre",Toast.LENGTH_LONG);
                     toast.show();
                 }else{
+                    while(result.next()){
+                       datosHora.add( result.getString(1));
+                        datosFecha.add(result.getString(2));
+                    }
 
-                    Toast toast = Toast.makeText(activity,result.getString("apellidos"),Toast.LENGTH_LONG);
-                    toast.show();
+
                 }
             }else{
                 Toast toast = Toast.makeText(activity,"consulta no está",Toast.LENGTH_LONG);
@@ -59,7 +66,7 @@ public class ConexionBD extends AsyncTask<String, Void, ResultSet> {
 
             conn = (Connection) DriverManager.getConnection("jdbc:mysql://"+rutaINI+"/base20172", "ubase20172", "pbase20172");
             Statement estado = (Statement) conn.createStatement();
-            String peticion = "select * from "+strings[0]+" where id_user='2'";
+            String peticion = "SELECT hora, fecha from hora , fecha where id_fecha = id_hora";
             ResultSet result = estado.executeQuery(peticion);
             return result;
         } catch (SQLException | ClassNotFoundException e) {
