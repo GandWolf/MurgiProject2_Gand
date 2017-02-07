@@ -16,9 +16,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * Created by usuario on 6/02/17.
- */
 
 public class InsertarDatos extends AsyncTask<String, Void, Statement> {
 

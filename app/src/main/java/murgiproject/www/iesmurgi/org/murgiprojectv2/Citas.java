@@ -176,7 +176,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
 
                 tpd.enableSeconds(false);
 
-                tpd.setTimeInterval(1, 10, 1);
+                tpd.setTimeInterval(1, 10, 60);
 
                 tpd.show(getFragmentManager(), "Timepickerdialog");
             }
