@@ -25,14 +25,15 @@ public class InsertarDatos extends AsyncTask<String, Void, Statement> {
     Activity activity;
     private String nombre, apellidos, asunto;
     private String fecha, hora;
-
-    public InsertarDatos(Activity activity, String nombre, String apellidos, String asunto,String fecha,String hora) {
+    private int cont;
+    public InsertarDatos(Activity activity, String nombre, String apellidos, String asunto,String fecha,String hora,int cont) {
         this.activity = activity;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.asunto = asunto;
         this.fecha=fecha;
         this.hora=hora;
+        this.cont=cont;
     }
 
 
@@ -53,6 +54,7 @@ public class InsertarDatos extends AsyncTask<String, Void, Statement> {
             insertUser(estado);
             insertFecha(estado);
            insertHora(estado);
+            insertCitas(estado);
 
             return estado;
         } catch (SQLException | ClassNotFoundException e) {
@@ -62,19 +64,25 @@ public class InsertarDatos extends AsyncTask<String, Void, Statement> {
     }
 
     public void insertUser(Statement statement) throws SQLException {
-        String insert = "insert into usuarios(nombre,apellidos,asunto) values('"+nombre+"','"+apellidos+"','"+asunto+"')";
+        String insert = "insert into usuarios (nombre,apellidos,asunto)values('"+nombre+"','"+apellidos+"','"+asunto+"')";
         statement.executeUpdate(insert);
     }
 
     public void insertFecha(Statement statement) throws SQLException{
 
-        String insert="insert into fecha(fecha) values('"+fecha+"')";
+        String insert="insert into fecha (fecha) values('"+fecha+"')";
         statement.executeUpdate(insert);
     }
 
     public void insertHora(Statement statement) throws SQLException{
 
         String insert="insert into hora(hora) values('"+hora+"')";
+        statement.executeUpdate(insert);
+    }
+
+    public void insertCitas(Statement statement) throws SQLException{
+
+        String insert="insert into hora(id_user, id_hora,id_fecha,ocupado) values('uu','ff','hjj','1')";
         statement.executeUpdate(insert);
     }
 

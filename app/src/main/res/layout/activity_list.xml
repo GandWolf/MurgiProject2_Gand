@@ -24,6 +24,7 @@
         android:src="@drawable/ic_account_balance_black_24dp"
         app:elevation="16dp"
         android:layout_margin="@dimen/fab_margin"
+        android:onClick="atras"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         app:pressedTranslationZ="12dp"
