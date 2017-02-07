@@ -25,18 +25,16 @@ public class InsertarDatos extends AsyncTask<String, Void, Statement> {
     Activity activity;
     private String nombre, apellidos, asunto;
     private String fecha, hora;
-    private int cont;
-    public InsertarDatos(Activity activity, String nombre, String apellidos, String asunto,String fecha,String hora,int cont) {
+
+    public InsertarDatos(Activity activity, String nombre, String apellidos, String asunto,String fecha,String hora) {
         this.activity = activity;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.asunto = asunto;
         this.fecha=fecha;
         this.hora=hora;
-        this.cont=cont;
+
     }
-
-
 
 
 

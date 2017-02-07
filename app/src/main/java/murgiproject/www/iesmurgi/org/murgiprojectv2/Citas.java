@@ -249,7 +249,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
 
 
                         Toast.makeText(getApplicationContext(), "Van a ser enviados a la BBDD", Toast.LENGTH_SHORT).show();
-                        //new InsertarDatos(Citas.this, nombre.getText().toString(), apellidos.getText().toString(), asunto, fecha, hora).execute();
+                        new InsertarDatos(Citas.this, nombre.getText().toString(), apellidos.getText().toString(), asunto, fecha, hora).execute();
 
                         // new ConexionBD(Citas.this).execute("usuarios");
                     }
