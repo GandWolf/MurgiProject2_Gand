@@ -123,7 +123,6 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         dateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                enviar.setEnabled(true);
                 compruebaInternet ();
                 Calendar now = Calendar.getInstance();
                 DatePickerDialog dpd = DatePickerDialog.newInstance(
@@ -151,7 +150,6 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         timeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                enviar.setEnabled(true);
                 compruebaInternet ();
                 Calendar now1 = Calendar.getInstance();
                 TimePickerDialog tpd = TimePickerDialog.newInstance(
@@ -299,6 +297,9 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         if (!isData && !isWifi) {
             Snackbar.make(findViewById(android.R.id.content), "Por favor, revise su conexión a Internet", Snackbar.LENGTH_LONG).show();
             enviar.setEnabled(false);
+        }
+        else {
+            enviar.setEnabled(true);
         }
     }
 }
