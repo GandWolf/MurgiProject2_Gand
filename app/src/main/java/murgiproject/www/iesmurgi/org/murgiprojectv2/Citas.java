@@ -1,6 +1,7 @@
 package murgiproject.www.iesmurgi.org.murgiprojectv2;
 
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
@@ -174,20 +175,13 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         enviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new ConexionBD(Citas.this).execute();
-                for (int i=0 ; i<datosHora.size();i++){
-                    //Toast.makeText(getApplicationContext(),datosFecha.get(i),Toast.LENGTH_SHORT).show();
-                    if (datosHora.get(i).equals("17:20:00") && datosFecha.get(i).equals("2017-02-09")){
-                        Snackbar.make(findViewById(android.R.id.content), "Error!! Seleccione otra fecha", Snackbar.LENGTH_SHORT).show();
-                    }
 
+                if(nombre.getText().toString().isEmpty() || apellidos.getText().toString().isEmpty() || edt_fecha.getText().toString().isEmpty() || edt_hora.getText().toString().isEmpty() || asunto.equals("")){
+                    Snackbar.make(findViewById(android.R.id.content), "Error!! Inserte todos los datos", Snackbar.LENGTH_SHORT).show();
+
+                }else{
+                    dialogoEnviar();
                 }
-//                if(nombre.getText().toString().isEmpty() || apellidos.getText().toString().isEmpty() || edt_fecha.getText().toString().isEmpty() || edt_hora.getText().toString().isEmpty() || asunto.equals("")){
-//                    Snackbar.make(findViewById(android.R.id.content), "Error!! Inserte todos los datos", Snackbar.LENGTH_SHORT).show();
-//
-//                }else{
-//                    dialogoEnviar();
-//                }
 
 
             }
@@ -205,10 +199,17 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
 
     @Override
     public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
+        Date fec=null;
         String date = "Fecha seleccionada " + dayOfMonth + "/" + (monthOfYear + 1) + "/" + year;
         edt_fecha.setText(date);
-        String dat = year +"-"+ (monthOfYear + 1) + "-" + dayOfMonth;
-        fecha=dat;
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
+        String dat = year +"-"+(monthOfYear + 1) + "-"  +dayOfMonth;
+        try {
+            fec=dt.parse(dat);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        fecha=dt.format(fec);
 
 
     }
@@ -218,8 +219,18 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
     public void onTimeSet(TimePickerDialog view, int hourOfDay, int minute, int second) {
         String time = "Hora seleccionada: " + hourOfDay + "h" + minute + "m" + second;
         edt_hora.setText(time);
-        String h = hourOfDay + ":" + minute + ":" + second;
+        String h = hourOfDay + ":" + minute + ":" + second+0;
         hora=h;
+        new ConexionBD(Citas.this).execute();
+        for (int i=0 ; i<datosHora.size();i++){
+            if (datosHora.get(i).equals(hora) && datosFecha.get(i).equals(fecha)){
+                Snackbar.make(findViewById(android.R.id.content), "Error!! Seleccione otra fecha", Snackbar.LENGTH_LONG).show();
+                enviar.setEnabled(false);
+            }else{
+                enviar.setEnabled(true);
+            }
+
+        }
 
     }
 
@@ -248,7 +259,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
 
 
                         new InsertarDatos(Citas.this, nombre.getText().toString(), apellidos.getText().toString(), asunto, fecha, hora).execute();
-                        Snackbar.make(findViewById(android.R.id.content), "Cita elegida correctamente", Snackbar.LENGTH_SHORT).show();
+                        Snackbar.make(findViewById(android.R.id.content), "Cita elegida correctamente", Snackbar.LENGTH_LONG).show();
 
                     }
                 });
