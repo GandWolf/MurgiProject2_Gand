@@ -44,6 +44,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
     private EditText nombre, apellidos;
     private String asunto;
     private String fecha, hora;
+    public boolean isData, isWifi;
 
     public static ArrayList<Usuarios> users = new ArrayList<>();
 
@@ -65,25 +66,9 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         final TextView cabecera = (TextView) findViewById(R.id.cabecera);
 
+        compruebaInternet ();
+
         cabecera.setVisibility(View.INVISIBLE);
-
-
-
-        ConnectivityManager manager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
-
-        //Comprobación de conexión de datos
-        boolean isData = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE)
-                .isConnectedOrConnecting();
-
-        //Comprobación de conexión de WiFi
-        boolean isWifi = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI)
-                .isConnectedOrConnecting();
-
-
-        if (!isData && !isWifi)  {
-            Snackbar.make(findViewById(android.R.id.content), "Por favor, revise su conexión a Internet", Snackbar.LENGTH_LONG).show();
-            enviar.setEnabled(false);
-        }
 
         //Crearnos una adaptador para volcar los datos
 
@@ -138,6 +123,8 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         dateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                enviar.setEnabled(true);
+                compruebaInternet ();
                 Calendar now = Calendar.getInstance();
                 DatePickerDialog dpd = DatePickerDialog.newInstance(
                         Citas.this,
@@ -164,6 +151,8 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         timeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                enviar.setEnabled(true);
+                compruebaInternet ();
                 Calendar now1 = Calendar.getInstance();
                 TimePickerDialog tpd = TimePickerDialog.newInstance(
                         Citas.this,
@@ -176,7 +165,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
 
                 tpd.enableSeconds(false);
 
-                tpd.setTimeInterval(1, 10, 60);
+                tpd.setTimeInterval(1, 10, 1);
 
                 tpd.show(getFragmentManager(), "Timepickerdialog");
             }
@@ -186,12 +175,9 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
             @Override
             public void onClick(View view) {
 
-                if(nombre.getText().toString().isEmpty() || apellidos.getText().toString().isEmpty() ||asunto.isEmpty()) {
-                    Snackbar.make(findViewById(android.R.id.content), "Por favor, revise sus datos", Snackbar.LENGTH_LONG).show();
-                }
-                else {
-                    dialogoEnviar();
-                }
+                if(nombre.getText().toString().isEmpty() || nombre.getText().toString().isEmpty())
+
+                dialogoEnviar();
             }
         });
 
@@ -296,6 +282,24 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
 
         AlertDialog dialog = builder.create();
         dialog.show();
+    }
+
+    public void compruebaInternet () {
+        ConnectivityManager manager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+
+        //Comprobación de conexión de datos
+        isData = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE)
+                .isConnectedOrConnecting();
+
+        //Comprobación de conexión de WiFi
+        isWifi = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI)
+                .isConnectedOrConnecting();
+
+
+        if (!isData && !isWifi) {
+            Snackbar.make(findViewById(android.R.id.content), "Por favor, revise su conexión a Internet", Snackbar.LENGTH_LONG).show();
+            enviar.setEnabled(false);
+        }
     }
 }
 
