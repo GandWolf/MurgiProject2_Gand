@@ -1,8 +1,11 @@
 package murgiproject.www.iesmurgi.org.murgiprojectv2;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
@@ -54,6 +57,16 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_citas);
 
+        ConnectivityManager connManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo mWifi = connManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+
+        if (mWifi.isConnected()) {
+            Toast.makeText(getApplicationContext(), "Wifi SI está activado ", Toast.LENGTH_SHORT).show();
+        }
+
+        else {
+            Toast.makeText(getApplicationContext(), "Wifi NO está activado ", Toast.LENGTH_SHORT).show();
+        }
 
         asunto="";
         dateButton = (ImageView) findViewById(R.id.btn_calendar);

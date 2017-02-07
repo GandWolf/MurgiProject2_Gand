@@ -19,7 +19,6 @@ public class ConexionBD extends AsyncTask<String, Void, ResultSet> {
 
     String ID;
     Activity activity;
-    AlertDialog progressdialog;
 
     public ConexionBD(Activity activity) {
         this.activity=activity;
