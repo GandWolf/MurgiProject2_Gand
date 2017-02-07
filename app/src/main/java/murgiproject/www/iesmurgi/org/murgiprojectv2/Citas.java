@@ -43,7 +43,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
     private Button enviar, cancelar;
     private EditText nombre, apellidos;
     private String asunto;
-    private Date fecha, hora;
+    private String fecha, hora;
 
 
 
@@ -190,15 +190,10 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
     public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
         String date = "Fecha seleccionada " + dayOfMonth + "/" + (monthOfYear + 1) + "/" + year;
         edt_fecha.setText(date);
-         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
         String dat = year +"/"+ (monthOfYear + 1) + "/" + dayOfMonth;
+        fecha=dat;
 
-        try {
-            fecha = dateFormat.parse(dat);
-            Toast.makeText(getApplicationContext(), ""+dateFormat.format(fecha), Toast.LENGTH_SHORT).show();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+
     }
 
 
@@ -207,13 +202,8 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         String time = "Hora seleccionada: " + hourOfDay + "h" + minute + "m" + second;
         edt_hora.setText(time);
         String h = hourOfDay + ":" + minute + ":" + second;
-        DateFormat formatoHora = new SimpleDateFormat("HH:mm:ss");
-        try {
-            hora = formatoHora.parse(h);
-           Toast.makeText(getApplicationContext(), ""+formatoHora.format(hora), Toast.LENGTH_SHORT).show();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+        hora=h;
+
     }
 
 

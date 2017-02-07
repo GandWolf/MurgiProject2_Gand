@@ -63,9 +63,7 @@ public class ConexionBD extends AsyncTask<String, Void, ResultSet> {
             String peticion = "select * from "+strings[0]+" where id_user='2'";
             ResultSet result = estado.executeQuery(peticion);
             return result;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         return null;

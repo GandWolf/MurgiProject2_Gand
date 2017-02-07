@@ -1,5 +1,6 @@
 package murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.support.design.widget.Snackbar;
@@ -23,9 +24,9 @@ public class InsertarDatos extends AsyncTask<String, Void, Statement> {
 
     Activity activity;
     private String nombre, apellidos, asunto;
-    private Date fecha, hora;
+    private String fecha, hora;
 
-    public InsertarDatos(Activity activity, String nombre, String apellidos, String asunto,Date fecha,Date hora) {
+    public InsertarDatos(Activity activity, String nombre, String apellidos, String asunto,String fecha,String hora) {
         this.activity = activity;
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -69,15 +70,15 @@ public class InsertarDatos extends AsyncTask<String, Void, Statement> {
 
 
     public void insertFecha(Statement statement) throws SQLException{
-        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-        String insert="insert into fecha(fecha) values('"+dateFormat.format(fecha)+"')";
+
+        String insert="insert into fecha(fecha) values('"+fecha+"')";
         statement.executeUpdate(insert);
     }
 
     public void insertHora(Statement statement) throws SQLException{
 
-        DateFormat formatoHora = new SimpleDateFormat("HH:mm:ss");
-        String insert="insert into hora(hora) values('"+formatoHora.format(hora)+"')";
+
+        String insert="insert into hora(hora) values('"+hora+"')";
         statement.executeUpdate(insert);
     }
 
