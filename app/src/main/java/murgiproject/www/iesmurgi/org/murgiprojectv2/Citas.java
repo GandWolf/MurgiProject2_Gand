@@ -185,7 +185,13 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         enviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dialogoEnviar();
+
+                if(nombre.getText().toString().isEmpty() || apellidos.getText().toString().isEmpty() ||asunto.isEmpty()) {
+                    Snackbar.make(findViewById(android.R.id.content), "Por favor, revise sus datos", Snackbar.LENGTH_LONG).show();
+                }
+                else {
+                    dialogoEnviar();
+                }
             }
         });
 
