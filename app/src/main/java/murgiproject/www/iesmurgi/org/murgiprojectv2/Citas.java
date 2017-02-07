@@ -75,7 +75,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         boolean isData = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE)
                 .isConnectedOrConnecting();
 
-        //omprobación de conexión de WiFi
+        //Comprobación de conexión de WiFi
         boolean isWifi = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI)
                 .isConnectedOrConnecting();
 
