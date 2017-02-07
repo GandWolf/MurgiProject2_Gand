@@ -23,17 +23,15 @@ public class InsertarDatos extends AsyncTask<String, Void, Statement> {
     private String nombre, apellidos, asunto;
     private String fecha, hora;
 
-    public InsertarDatos(Activity activity, String nombre, String apellidos, String asunto,String fecha,String hora) {
+    public InsertarDatos(Activity activity, String nombre, String apellidos, String asunto, String fecha, String hora) {
         this.activity = activity;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.asunto = asunto;
-        this.fecha=fecha;
-        this.hora=hora;
+        this.fecha = fecha;
+        this.hora = hora;
 
     }
-
-
 
 
     @Override
@@ -41,15 +39,15 @@ public class InsertarDatos extends AsyncTask<String, Void, Statement> {
         try {
             Connection conn;
             Class.forName("com.mysql.jdbc.Driver");
-            String rutaINI="";
-            rutaINI="www.iesmurgi.org";
+            String rutaINI = "";
+            rutaINI = "www.iesmurgi.org";
 
-            conn = (Connection) DriverManager.getConnection("jdbc:mysql://"+rutaINI+"/base20172", "ubase20172", "pbase20172");
+            conn = (Connection) DriverManager.getConnection("jdbc:mysql://" + rutaINI + "/base20172", "ubase20172", "pbase20172");
             Statement estado = (Statement) conn.createStatement();
 
             insertUser(estado);
             insertFecha(estado);
-           insertHora(estado);
+            insertHora(estado);
             insertCitas(estado);
 
             return estado;
@@ -60,29 +58,27 @@ public class InsertarDatos extends AsyncTask<String, Void, Statement> {
     }
 
     public void insertUser(Statement statement) throws SQLException {
-        String insert = "insert into usuarios (nombre,apellidos,asunto)values('"+nombre+"','"+apellidos+"','"+asunto+"')";
+        String insert = "insert into usuarios (nombre,apellidos,asunto)values('" + nombre + "','" + apellidos + "','" + asunto + "')";
         statement.executeUpdate(insert);
     }
 
-    public void insertFecha(Statement statement) throws SQLException{
+    public void insertFecha(Statement statement) throws SQLException {
 
-        String insert="insert into fecha (fecha) values('"+fecha+"')";
+        String insert = "insert into fecha (fecha) values('" + fecha + "')";
         statement.executeUpdate(insert);
     }
 
-    public void insertHora(Statement statement) throws SQLException{
+    public void insertHora(Statement statement) throws SQLException {
 
-        String insert="insert into hora(hora) values('"+hora+"')";
+        String insert = "insert into hora(hora) values('" + hora + "')";
         statement.executeUpdate(insert);
     }
 
-    public void insertCitas(Statement statement) throws SQLException{
+    public void insertCitas(Statement statement) throws SQLException {
 
-        String insert="insert into hora(id_user, id_hora,id_fecha,ocupado) values('uu','ff','hjj','1')";
+        String insert = "insert into hora(id_user, id_hora,id_fecha,ocupado) values('uu','ff','hjj','1')";
         statement.executeUpdate(insert);
     }
-
-
 
 
 }

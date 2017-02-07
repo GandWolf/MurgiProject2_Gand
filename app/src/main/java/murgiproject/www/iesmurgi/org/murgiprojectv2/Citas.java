@@ -173,9 +173,13 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
             @Override
             public void onClick(View view) {
 
-                if(nombre.getText().toString().isEmpty() || nombre.getText().toString().isEmpty())
+                if(nombre.getText().toString().isEmpty() || apellidos.getText().toString().isEmpty() || edt_fecha.getText().toString().isEmpty() || edt_hora.getText().toString().isEmpty() || asunto.equals("")){
+                    Snackbar.make(findViewById(android.R.id.content), "Error!! Inserte todos los datos", Snackbar.LENGTH_SHORT).show();
+                }else{
+                    dialogoEnviar();
+                }
 
-                dialogoEnviar();
+
             }
         });
 
@@ -232,9 +236,9 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
                     public void onClick(DialogInterface dialog, int which) {
 
 
-                        Toast.makeText(getApplicationContext(), "Van a ser enviados a la BBDD", Toast.LENGTH_SHORT).show();
-                        new InsertarDatos(Citas.this, nombre.getText().toString(), apellidos.getText().toString(), asunto, fecha, hora).execute();
 
+                        new InsertarDatos(Citas.this, nombre.getText().toString(), apellidos.getText().toString(), asunto, fecha, hora).execute();
+                        Snackbar.make(findViewById(android.R.id.content), "Cita elegida correctamente", Snackbar.LENGTH_SHORT).show();
                         // new ConexionBD(Citas.this).execute("usuarios");
                     }
                 });
