@@ -2,12 +2,12 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_weight="9"
     android:background="#e0f2f1"
+    android:id="@+id/ContraintLayout_citas"
     tools:context=".MainActivity">
 
     <TextView
@@ -62,7 +62,6 @@
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <TextView
-        android:id="@+id/textView_Apellido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/apellido_solicitante"
