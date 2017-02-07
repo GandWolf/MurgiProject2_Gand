@@ -62,12 +62,9 @@ public class InsertarDatos extends AsyncTask<String, Void, Statement> {
     }
 
     public void insertUser(Statement statement) throws SQLException {
-
         String insert = "insert into usuarios(nombre,apellidos,asunto) values('"+nombre+"','"+apellidos+"','"+asunto+"')";
         statement.executeUpdate(insert);
-
     }
-
 
     public void insertFecha(Statement statement) throws SQLException{
 
@@ -77,10 +74,11 @@ public class InsertarDatos extends AsyncTask<String, Void, Statement> {
 
     public void insertHora(Statement statement) throws SQLException{
 
-
         String insert="insert into hora(hora) values('"+hora+"')";
         statement.executeUpdate(insert);
     }
+
+
 
 
 }
