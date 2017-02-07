@@ -18,6 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAlignment="center"
+        android:textColor="@color/negro"
         android:textStyle="normal|bold"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
@@ -30,6 +31,7 @@
     <TextView
         android:text="@string/fpBasicaTitulo"
         android:layout_width="wrap_content"
+        android:textColor="@color/colorSubtitulo"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
@@ -40,6 +42,7 @@
 
     <TextView
         android:text="@string/fpbasica1"
+        android:textColor="@color/negro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -71,6 +74,7 @@
 
     <TextView
         android:text="@string/fpbasica2"
+        android:textColor="@color/negro"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:textSize="20sp"
@@ -103,6 +107,7 @@
 
         <TextView
             android:text="@string/fpbsica3"
+            android:textColor="@color/negro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
@@ -136,6 +141,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
             android:textSize="20sp"
+            android:textColor="@color/negro"
         android:textAlignment="viewStart"
       />
 
@@ -143,6 +149,7 @@
 
     <TextView
         android:text="@string/fpmedioTitulo"
+        android:textColor="@color/colorSubtitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="22sp"
@@ -158,6 +165,7 @@
 
     <TextView
         android:text="@string/fpmedio1"
+        android:textColor="@color/negro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -188,6 +196,7 @@
 
         <TextView
         android:text="@string/fpmedio2"
+            android:textColor="@color/negro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
             android:textSize="20sp"
@@ -216,7 +225,8 @@
 
         <TextView
         android:text="@string/fpmedio3"
-        android:layout_width="wrap_content"
+            android:textColor="@color/negro"
+            android:layout_width="wrap_content"
         android:layout_height="wrap_content"
             android:textSize="20sp"
        />
@@ -245,7 +255,8 @@
 
         <TextView
         android:text="@string/fpmedio4"
-        android:layout_width="wrap_content"
+            android:textColor="@color/negro"
+            android:layout_width="wrap_content"
         android:layout_height="wrap_content"
             android:textSize="20sp"
          />
@@ -253,6 +264,7 @@
 
     <TextView
         android:text="@string/fpsuperiorTitulo"
+        android:textColor="@color/colorSubtitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="22sp"
@@ -265,6 +277,7 @@
     <TextView
         android:text="@string/fpsuperio1"
         android:layout_width="wrap_content"
+        android:textColor="@color/negro"
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:layout_marginEnd="16dp"
@@ -296,6 +309,7 @@
     <TextView
         android:text="@string/fpsuperio2"
         android:layout_width="wrap_content"
+        android:textColor="@color/negro"
         android:layout_height="wrap_content"
         android:textSize="20sp"
 
@@ -322,7 +336,8 @@
 
         <TextView
         android:text="@string/fpsuperio3"
-        android:layout_width="wrap_content"
+            android:textColor="@color/negro"
+            android:layout_width="wrap_content"
         android:layout_height="wrap_content"
             android:textSize="20sp"
        />
@@ -349,6 +364,7 @@
 
         <TextView
         android:text="@string/fpsuperio4"
+         android:textColor="@color/negro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
             android:textSize="20sp"
@@ -379,6 +395,7 @@
         <TextView
         android:text="@string/fpsuperio5"
         android:layout_width="wrap_content"
+            android:textColor="@color/negro"
         android:layout_height="wrap_content"
             android:textSize="20sp"
  />
@@ -404,6 +421,7 @@
 
     <TextView
         android:text="@string/fpsuperio6"
+        android:textColor="@color/negro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"

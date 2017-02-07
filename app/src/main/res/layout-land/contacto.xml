@@ -27,6 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/logo_murgi"
+                android:textColor="@color/negro"
                 android:textSize="40sp"
 
                 />
@@ -65,6 +66,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="32dp"
                         android:text="@string/contacto"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorSubtitulo"
                         android:textSize="20sp" />
 
                     <TextView
@@ -72,6 +75,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="105dp"
                         android:text="@string/telefono"
+                        android:textColor="@color/negro"
                         android:textSize="20sp" />
 
                 </LinearLayout>
@@ -93,6 +97,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="32dp"
                         android:text="@string/junta"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorSubtitulo"
                         android:textSize="20sp" />
 
                     <TextView
@@ -100,6 +106,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="60dp"
                         android:text="@string/telefonoJunta"
+                        android:textColor="@color/negro"
                         android:textSize="20sp" />
 
                 </LinearLayout>
@@ -124,6 +131,8 @@
                         android:layout_marginStart="40dp"
                         android:layout_weight="1"
                         android:text="@string/fax"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorSubtitulo"
                         android:textSize="20sp" />
 
                     <TextView
@@ -131,6 +140,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="85dp"
                         android:text="@string/fax_telefono"
+                        android:textColor="@color/negro"
                         android:textSize="20sp" />
 
                 </LinearLayout>
@@ -153,6 +163,8 @@
                         android:layout_marginStart="40dp"
                         android:layout_marginTop="30dp"
                         android:text="@string/web_dibujo"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorSubtitulo"
                         android:textSize="20sp" />
 
                     <TextView
@@ -185,6 +197,8 @@
                         android:layout_marginStart="35dp"
                         android:layout_marginTop="30dp"
                         android:text="@string/email"
+                        android:textColor="@color/colorSubtitulo"
+                        android:textStyle="bold"
                         android:textSize="20sp" />
 
                     <TextView
@@ -194,6 +208,7 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="30dp"
                         android:text="@string/email_escrito"
+                        android:textColor="@color/negro"
                         android:textSize="20sp" />
 
                 </LinearLayout>
@@ -214,6 +229,8 @@
                     android:layout_marginStart="40dp"
                     android:layout_marginTop="30dp"
                     android:text="@string/desarrollada"
+                    android:textColor="@color/negro"
+                    android:textStyle="bold"
                     android:textSize="20sp" />
 
                 <TextView
@@ -222,6 +239,7 @@
                     android:layout_marginStart="40dp"
                     android:layout_marginTop="10dp"
                     android:text="@string/Luis_nombre"
+                    android:textColor="@color/negro"
                     android:textSize="20sp"
 
                     />
@@ -231,6 +249,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
                     android:text="@string/Luis_email"
+                    android:textColor="@color/colorSubtitulo"
                     android:textSize="20sp"
 
                     />
@@ -241,6 +260,7 @@
                     android:layout_marginStart="40dp"
                     android:layout_marginTop="20dp"
                     android:text="@string/chema_nombre"
+                    android:textColor="@color/negro"
                     android:textSize="20sp"
 
                     />
@@ -250,6 +270,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
                     android:text="@string/chema_email"
+                    android:textColor="@color/colorSubtitulo"
                     android:textSize="20sp" />
 
                 <TextView
@@ -258,6 +279,7 @@
                     android:layout_marginStart="40dp"
                     android:layout_marginTop="20dp"
                     android:text="@string/Juanjo_nombre"
+                    android:textColor="@color/negro"
                     android:textSize="20sp"
 
                     />
@@ -267,6 +289,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
                     android:text="@string/Juanjo_email"
+                    android:textColor="@color/colorSubtitulo"
                     android:textSize="20sp"
 
                     />
@@ -277,6 +300,7 @@
                     android:layout_marginStart="40dp"
                     android:layout_marginTop="20dp"
                     android:text="@string/Miguel_nombre"
+                    android:textColor="@color/negro"
                     android:textSize="20sp" />
 
                 <TextView
@@ -285,6 +309,7 @@
                     android:layout_marginBottom="20dp"
                     android:layout_marginStart="40dp"
                     android:text="@string/Miguel_email"
+                    android:textColor="@color/colorSubtitulo"
                     android:textSize="20sp" />
 
 
