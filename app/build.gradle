@@ -4,9 +4,9 @@ android {
     signingConfigs {
           /* debug {
             keyAlias 'iesmurgi'
-            keyPassword '123456'
-            storeFile file('/home/usuario/pruena')
-            storePassword '123456'
+            keyPassword 'iesmurgi'
+            storeFile file('/home/usuario/key.jks')
+            storePassword 'iesmurgi'
         }*/
     }
     compileSdkVersion 25

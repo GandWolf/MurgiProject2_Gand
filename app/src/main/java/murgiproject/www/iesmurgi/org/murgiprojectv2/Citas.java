@@ -217,7 +217,8 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
             e.printStackTrace();
         }
         fecha = dt.format(fec);
-
+        //comprueba que la cita esté libre
+        compruebaCita();
 
     }
 
@@ -229,17 +230,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         String h = hourOfDay + ":" + minute + ":" + second + 0;
         hora = h;
         //comprueba que la cita esté libre
-        new ConexionBD(Citas.this).execute();
-        for (int i = 0; i < datosHora.size(); i++) {
-            if (datosHora.get(i).equals(hora) && datosFecha.get(i).equals(fecha)) {
-                Snackbar.make(findViewById(android.R.id.content), "Error!! Seleccione otra fecha", Snackbar.LENGTH_LONG).show();
-                enviar.setEnabled(false);
-            } else {
-                enviar.setEnabled(true);
-            }
-
-        }
-
+        compruebaCita();
     }
 
 
@@ -335,6 +326,19 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
     }
 
 
+    public void compruebaCita(){
+        new ConexionBD(Citas.this).execute();
+        for (int i = 0; i < datosHora.size(); i++) {
+            if (datosHora.get(i).equals(hora) && datosFecha.get(i).equals(fecha)) {
+                Snackbar.make(findViewById(android.R.id.content), "Error!! Seleccione otra fecha", Snackbar.LENGTH_LONG).show();
+                enviar.setEnabled(false);
+            } else {
+                enviar.setEnabled(true);
+            }
+
+        }
+
+    }
 
 
 
