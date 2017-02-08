@@ -133,7 +133,6 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
                         now.get(Calendar.DAY_OF_MONTH)
                 );
 
-
                 dpd.show(getFragmentManager(), "Datepickerdialog");
 
             }
