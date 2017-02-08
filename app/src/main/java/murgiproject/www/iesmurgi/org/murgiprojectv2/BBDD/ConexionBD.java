@@ -11,6 +11,7 @@ import com.mysql.jdbc.Statement;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import murgiproject.www.iesmurgi.org.murgiprojectv2.Citas;
 
@@ -21,7 +22,7 @@ import static murgiproject.www.iesmurgi.org.murgiprojectv2.Citas.datosHora;
 
 public class ConexionBD extends AsyncTask<String, Void, ResultSet> {
 
-    String ID;
+
     Activity activity;
 
     public ConexionBD(Activity activity) {
@@ -36,9 +37,12 @@ public class ConexionBD extends AsyncTask<String, Void, ResultSet> {
                     Toast toast = Toast.makeText(activity,"No existen resultados con ese nombre",Toast.LENGTH_LONG);
                     toast.show();
                 }else{
+                    datosHora.clear();
+                    datosFecha.clear();
                     while(result.next()){
-                       datosHora.add( result.getString(1));
+                        datosHora.add( result.getString(1));
                         datosFecha.add(result.getString(2));
+
                     }
 
 

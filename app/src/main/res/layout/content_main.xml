@@ -11,14 +11,14 @@
         android:layout_weight="1"
         android:background="@drawable/portada">
         <!--cambiar la posicion del texto-->
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="IES MURGI"
-               android:id="@+id/textoInicio"
-               android:gravity="center"
-               style="@style/textoInicio"
-               android:textSize="40dp"/>
+        <TextView
+            android:id="@+id/textoInicio"
+            style="@style/textoInicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/ies_murgi"
+            android:textSize="40sp" />
     </RelativeLayout>
     <!--cambiar el color de los botones y el dibujo que tiene-->
     <LinearLayout
@@ -28,76 +28,72 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="@color/Verde9"
             android:id="@+id/ir_iesMurgi"
-            android:layout_weight="1">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            style="@style/botonesFotos"
-            android:background="@color/Verde9"
-            android:src="@drawable/historia_cambio"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/textoFotos"
-            android:text="@string/historia"
-            />
-        </LinearLayout>
-        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="@color/Verde7"
             android:layout_weight="1"
-            android:id="@+id/boton_contacto"
-            >
+            android:background="@color/Verde9"
+            android:orientation="vertical">
 
-        <ImageView
+            <ImageView
+                style="@style/botonesFotos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/Verde9"
+                android:src="@drawable/historia_cambio" />
 
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            style="@style/botonesFotos"
-            android:background="@color/Verde7"
-            android:src="@drawable/contacto_cambio"
-            />
             <TextView
+                style="@style/textoFotos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactos"
-                style="@style/textoFotos"
-                />
+                android:text="@string/historia" />
         </LinearLayout>
+
         <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:background="@color/Verde10"
-                android:layout_weight="1"
-            android:id="@+id/boton_matriculacion"
-            >
-
-        <ImageView
-
-            android:layout_width="match_parent"
+            android:id="@+id/boton_contacto"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="@color/Verde10"
-            style="@style/botonesFotos"
-            android:src="@drawable/matricula_cambio" />
+            android:layout_weight="1"
+            android:background="@color/Verde7"
+            android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/textoFotos"
-                    android:text="@string/matricula"
-                    />
-            </LinearLayout>
+            <ImageView
+
+                style="@style/botonesFotos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/Verde7"
+                android:src="@drawable/contacto_cambio" />
+
+            <TextView
+                style="@style/textoFotos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contactos" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/boton_matriculacion"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/Verde10"
+            android:orientation="vertical">
+
+            <ImageView
+
+                style="@style/botonesFotos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/Verde10"
+                android:src="@drawable/matricula_cambio" />
+
+            <TextView
+                style="@style/textoFotos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/matricula" />
+        </LinearLayout>
     </LinearLayout>
     <!--linea de abajo-->
     <LinearLayout
@@ -108,71 +104,75 @@
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/boton_mapa"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical"
+            android:layout_weight="1"
             android:background="@color/Verde4"
-            android:id="@+id/boton_mapa"
-            android:layout_weight="1">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/Verde4"
-            style="@style/botonesFotos"
-            android:src="@drawable/mapa_cambio" />
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/botonesFotos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/Verde4"
+                android:src="@drawable/mapa_cambio" />
 
             <TextView
+                style="@style/textoFotos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/mapa" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/boton_cursos"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/Verde8"
+            android:orientation="vertical">
+
+            <ImageView
+
+                style="@style/botonesFotos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/Verde8"
+                android:src="@drawable/cursos_cambio" />
+
+            <TextView
                 style="@style/textoFotos"
-                android:text="@string/mapa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cursos"
+
                 />
         </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:background="@color/Verde8"
-                android:layout_weight="1"
-                android:id="@+id/boton_cursos"
-                >
-        <ImageView
 
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:id="@+id/boton_cita"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="@color/Verde8"
-            style="@style/botonesFotos"
-            android:src="@drawable/cursos_cambio"
-            />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/textoFotos"
-                    android:text="@string/cursos"
-
-                    />
-            </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:background="@color/Verde7"
-                    android:id="@+id/boton_cita"
-                    android:layout_weight="1">
-        <ImageView
-            android:layout_width="match_parent"
+            android:layout_weight="1"
             android:background="@color/Verde7"
-            android:layout_height="match_parent"
-            style="@style/botonesFotos"
-            android:src="@drawable/cita_cambio" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        style="@style/textoFotos"
-                        android:text="@string/citas"            />
-                </LinearLayout>
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/botonesFotos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/Verde7"
+                android:src="@drawable/cita_cambio" />
+
+            <TextView
+                style="@style/textoFotos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/citas" />
+        </LinearLayout>
 
     </LinearLayout>
 
-   </LinearLayout>
+</LinearLayout>
 
