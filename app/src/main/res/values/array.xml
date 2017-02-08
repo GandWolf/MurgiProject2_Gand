@@ -2,7 +2,7 @@
 <resources>
 
     <string-array name="consultas_secretaria_array">
-        <item></item>
+        <item>Selecciona:</item>
         <item> · Matriculación </item>
         <item> · Solicitud de certificados </item>
         <item> · Información oferta educativa </item>

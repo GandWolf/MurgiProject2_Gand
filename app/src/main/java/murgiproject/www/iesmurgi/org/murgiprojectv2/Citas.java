@@ -2,9 +2,12 @@ package murgiproject.www.iesmurgi.org.murgiprojectv2;
 
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
@@ -298,24 +301,18 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
     }
 
     public void compruebaInternet () {
-        ConnectivityManager manager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
-
-        //Comprobación de conexión de datos
-        isData = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE)
-                .isConnectedOrConnecting();
-
-        //Comprobación de conexión de WiFi
-        isWifi = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI)
-                .isConnectedOrConnecting();
-
-
-        if (!isData && !isWifi) {
+        ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        if (activeNetwork != null) { // conctado
+            enviar.setEnabled(true);
+            if (activeNetwork.getType() == ConnectivityManager.TYPE_WIFI) {
+            } else if (activeNetwork.getType() == ConnectivityManager.TYPE_MOBILE) {
+            }
+        } else {//desconectado
             Snackbar.make(findViewById(android.R.id.content), "Por favor, revise su conexión a Internet", Snackbar.LENGTH_LONG).show();
             enviar.setEnabled(false);
         }
-        else {
-            enviar.setEnabled(true);
-        }
+
     }
 
 
