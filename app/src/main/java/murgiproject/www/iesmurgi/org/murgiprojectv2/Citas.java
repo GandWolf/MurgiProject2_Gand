@@ -133,15 +133,6 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
                         now.get(Calendar.DAY_OF_MONTH)
                 );
 
-                Calendar[] days = new Calendar[13];
-                for (int i = -6; i < 7; i++) {
-                    Calendar day = Calendar.getInstance();
-                    day.add(Calendar.DAY_OF_MONTH, i * 2);
-                    days[i + 6] = day;
-                }
-
-
-                dpd.setSelectableDays(days);
 
                 dpd.show(getFragmentManager(), "Datepickerdialog");
 
@@ -165,6 +156,9 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
                 tpd.enableSeconds(false);
 
                 tpd.setTimeInterval(1, 10, 60);
+                tpd.setMinTime(9,0,0);
+                tpd.setMaxTime(14,0,0);
+
 
                 tpd.show(getFragmentManager(), "Timepickerdialog");
             }
