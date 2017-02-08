@@ -323,7 +323,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         new ConexionBD(Citas.this).execute();
         for (int i=0 ; i<datosFecha.size();i++){
             if (datosHora.get(i).equals(hora) && datosFecha.get(i).equals(fecha)){
-                Snackbar.make(findViewById(android.R.id.content), "Error!! Seleccione otra fecha", Snackbar.LENGTH_LONG).show();
+                Snackbar.make(findViewById(android.R.id.content), "Error!! Seleccione otra cita", Snackbar.LENGTH_LONG).show();
                 enviar.setEnabled(false);
             }
 
