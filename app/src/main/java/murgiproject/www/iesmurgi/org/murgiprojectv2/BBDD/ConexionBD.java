@@ -1,8 +1,6 @@
 package murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.ExpandableListActivity;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
@@ -11,9 +9,6 @@ import com.mysql.jdbc.Statement;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-
-import murgiproject.www.iesmurgi.org.murgiprojectv2.Citas;
 
 import static murgiproject.www.iesmurgi.org.murgiprojectv2.Citas.datosFecha;
 import static murgiproject.www.iesmurgi.org.murgiprojectv2.Citas.datosHora;

@@ -139,6 +139,7 @@
 
     <TextView
         android:textColor="@color/negro"
+        android:textStyle="bold"
         android:layout_width="126dp"
         android:layout_height="60dp"
         android:id="@+id/edt_hora"
@@ -151,6 +152,7 @@
 
     <TextView
         android:textColor="@color/negro"
+        android:textStyle="bold"
         android:layout_width="110dp"
         android:layout_height="64dp"
         android:id="@+id/edt_fecha"

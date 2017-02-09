@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true"
-        android:drawable="@drawable/contacto2" /> <!-- pressed -->
+        android:drawable="@drawable/contacto2" /> <!-- Presionado -->
     <item android:state_focused="true"
-        android:drawable="@drawable/contacto2" /> <!-- focused -->
-    <item android:drawable="@drawable/contacto" /> <!-- default -->
+        android:drawable="@drawable/contacto2" /> <!-- Seleccionado -->
+    <item android:drawable="@drawable/contacto" /> <!-- Por defecto -->
 </selector>

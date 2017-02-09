@@ -1,27 +1,17 @@
 package murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.AsyncTask;
-import android.support.design.widget.Snackbar;
-import android.widget.Toast;
-
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
-
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 
 public class InsertarDatos extends AsyncTask<String, Void, Statement> {
 
     Activity activity;
-    private String nombre, apellidos, asunto;
-    private String fecha, hora;
+    private String nombre, apellidos, asunto,fecha, hora;
 
     public InsertarDatos(Activity activity, String nombre, String apellidos, String asunto, String fecha, String hora) {
         this.activity = activity;

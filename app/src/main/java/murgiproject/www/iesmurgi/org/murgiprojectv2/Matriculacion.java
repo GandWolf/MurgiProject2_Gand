@@ -8,8 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class Matriculacion extends AppCompatActivity {
-    ImageView linkSecretaria;
-    ImageView linkInfo;
+    ImageView linkSecretaria,linkInfo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

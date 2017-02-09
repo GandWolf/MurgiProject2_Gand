@@ -93,7 +93,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void compruebaInternet() {
         ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
-        if (activeNetwork != null) { // conctado
+        if (activeNetwork != null) { // conectado
             if (activeNetwork.getType() == ConnectivityManager.TYPE_WIFI) {
             } else if (activeNetwork.getType() == ConnectivityManager.TYPE_MOBILE) {
             }

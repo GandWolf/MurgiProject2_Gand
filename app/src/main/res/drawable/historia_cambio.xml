@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true"
-        android:drawable="@drawable/historia2" /> <!-- pressed -->
+        android:drawable="@drawable/historia2" /> <!-- Presionado -->
     <item android:state_focused="true"
-        android:drawable="@drawable/historia2" /> <!-- focused -->
-    <item android:drawable="@drawable/historia" /> <!-- default -->
+        android:drawable="@drawable/historia2" /> <!-- Seleccionado -->
+    <item android:drawable="@drawable/historia" /> <!-- Por defecto -->
 </selector>

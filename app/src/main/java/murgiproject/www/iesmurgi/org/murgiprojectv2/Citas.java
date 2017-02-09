@@ -41,9 +41,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
     private TextView edt_fecha, edt_hora;
     private Button enviar, cancelar;
     private EditText nombre, apellidos;
-    private String asunto;
-    private String fecha, hora;
-    public boolean isData, isWifi;
+    private String asunto, fecha, hora;
 
     public static ArrayList<String> datosFecha = new ArrayList<>();
     public static ArrayList<String> datosHora = new ArrayList<>();
@@ -168,7 +166,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
             public void onClick(View view) {
 
                 if(nombre.getText().toString().isEmpty() || apellidos.getText().toString().isEmpty() || edt_fecha.getText().toString().isEmpty() || edt_hora.getText().toString().isEmpty() || asunto.equals("")){
-                    Snackbar.make(findViewById(android.R.id.content), "Error!! Inserte todos los datos", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(findViewById(android.R.id.content), "¡¡¡Error!!! Inserte todos los datos", Snackbar.LENGTH_SHORT).show();
 
                 }else{
                     dialogoEnviar();
@@ -191,7 +189,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
     @Override
     public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
         Date fec=null;
-        String date = "Fecha seleccionada " + dayOfMonth + "/" + (monthOfYear + 1) + "/" + year;
+        String date = "Fecha seleccionada: " + dayOfMonth + "/" + (monthOfYear + 1) + "/" + year;
         edt_fecha.setText(date);
         @SuppressLint("SimpleDateFormat") SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
         String dat = year +"-"+(monthOfYear + 1) + "-"  +dayOfMonth;
@@ -209,7 +207,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
     @Override
     public void onTimeSet(TimePickerDialog view, int hourOfDay, int minute, int second) {
         Date hor=null;
-        String time = "Hora seleccionada: " + hourOfDay + "h" + minute + "m" + second;
+        String time = "Hora seleccionada: " + hourOfDay + "h" + minute + "min";
         edt_hora.setText(time);
         String h = hourOfDay + ":" + minute + ":" + second;
         @SuppressLint("SimpleDateFormat") SimpleDateFormat dt = new SimpleDateFormat("hh:mm:ss");
@@ -257,9 +255,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         builder.setNegativeButton(negativeText,
                 new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(), "No vas a enviar nada", Toast.LENGTH_SHORT).show();
-                    }
+                    public void onClick(DialogInterface dialog, int which) {}
                 });
 
         AlertDialog dialog = builder.create();
@@ -287,9 +283,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         builder.setNegativeButton(negativeText,
                 new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(), "Vas a permanecer en la activity", Toast.LENGTH_SHORT).show();
-                    }
+                    public void onClick(DialogInterface dialog, int which) {}
                 });
 
         AlertDialog dialog = builder.create();
@@ -299,7 +293,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
     public void compruebaInternet () {
         ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
-        if (activeNetwork != null) { // conctado
+        if (activeNetwork != null) { // conectado
             enviar.setEnabled(true);
             if (activeNetwork.getType() == ConnectivityManager.TYPE_WIFI) {
             } else if (activeNetwork.getType() == ConnectivityManager.TYPE_MOBILE) {
@@ -316,7 +310,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         new ConexionBD(Citas.this).execute();
         for (int i=0 ; i<datosFecha.size();i++){
             if (datosHora.get(i).equals(hora) && datosFecha.get(i).equals(fecha)){
-                Snackbar.make(findViewById(android.R.id.content), "Error!! Seleccione otra cita", Snackbar.LENGTH_LONG).show();
+                Snackbar.make(findViewById(android.R.id.content), "¡¡¡Error!!! Seleccione otra cita", Snackbar.LENGTH_LONG).show();
                 enviar.setEnabled(false);
             }
 
