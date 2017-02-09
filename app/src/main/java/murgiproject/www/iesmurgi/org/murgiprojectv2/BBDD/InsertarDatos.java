@@ -29,8 +29,7 @@ public class InsertarDatos extends AsyncTask<String, Void, Statement> {
         try {
             Connection conn;
             Class.forName("com.mysql.jdbc.Driver");
-            String rutaINI = "";
-            rutaINI = "www.iesmurgi.org";
+            String rutaINI ="www.iesmurgi.org";
 
             conn = (Connection) DriverManager.getConnection("jdbc:mysql://" + rutaINI + "/base20172", "ubase20172", "pbase20172");
             Statement estado = (Statement) conn.createStatement();

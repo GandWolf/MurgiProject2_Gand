@@ -37,13 +37,10 @@ public class ConexionBD extends AsyncTask<String, Void, ResultSet> {
                     while(result.next()){
                         datosHora.add( result.getString(1));
                         datosFecha.add(result.getString(2));
-
                     }
-
-
                 }
             }else{
-                Toast toast = Toast.makeText(activity,"consulta no está",Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(activity,"Consulta no disponible",Toast.LENGTH_LONG);
                 toast.show();
             }
         } catch (SQLException e) {
@@ -60,8 +57,7 @@ public class ConexionBD extends AsyncTask<String, Void, ResultSet> {
         try {
             Connection conn;
             Class.forName("com.mysql.jdbc.Driver");
-            String rutaINI="";
-            rutaINI="www.iesmurgi.org";
+            String rutaINI="www.iesmurgi.org";
 
             conn = (Connection) DriverManager.getConnection("jdbc:mysql://"+rutaINI+"/base20172", "ubase20172", "pbase20172");
             Statement estado = (Statement) conn.createStatement();
