@@ -70,7 +70,9 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".VerCursos"> </activity>
+        <activity android:name=".VerCursos"
+            android:label="@string/cursos_label">
+        </activity>
     </application>
 
 </manifest>
