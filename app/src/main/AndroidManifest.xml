@@ -15,6 +15,7 @@
         android:theme="@style/MurgiTema">
         <activity
             android:name=".MainActivity"
+            android:theme="@style/Theme.Design.NoActionBar"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             >
