@@ -48,7 +48,7 @@ public class InsertarDatos extends AsyncTask<String, Void, Statement> {
             insertUser(estado);
             insertFecha(estado);
             insertHora(estado);
-            insertCitas(estado);
+
 
             return estado;
         } catch (SQLException | ClassNotFoundException e) {
@@ -74,11 +74,7 @@ public class InsertarDatos extends AsyncTask<String, Void, Statement> {
         statement.executeUpdate(insert);
     }
 
-    public void insertCitas(Statement statement) throws SQLException {
 
-        String insert = "insert into hora(id_user, id_hora,id_fecha,ocupado) values('uu','ff','hjj','1')";
-        statement.executeUpdate(insert);
-    }
 
 
 }
