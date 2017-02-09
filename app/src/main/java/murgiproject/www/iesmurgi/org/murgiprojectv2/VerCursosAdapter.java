@@ -3,6 +3,7 @@ package murgiproject.www.iesmurgi.org.murgiprojectv2;
 import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,9 +40,14 @@ public class VerCursosAdapter extends ArrayAdapter<Cursos> {
         ImageView imagen = (ImageView) vista.findViewById(R.id.iv_portada);
 
 
+
         titulo.setText(mCurso.getTitulo());
         descripcion.setText(mCurso.getDescripcion());
         imagen.setImageResource(mCurso.getImagen());
+
+
+
+
 
         return vista;
 

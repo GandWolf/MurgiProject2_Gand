@@ -25,7 +25,9 @@ public class VerCursos extends AppCompatActivity {
         Bundle b = i.getExtras();
         pos = b.getInt("pos");
 
+
         if(pos==1){
+
             cursos=new ArrayList<>();
             cursos.add(new Cursos("Bachillerato en Ciencias de la Tecnologia","Los alumnos desde este bachillerato pueden  especializarse  en  la  rama  de Ciencias  de  la  Salud,  cursando  las asignaturas  propias  de  la modalidad o en la rama de CC e Ingeniería en la que  desarrollan las competencias  y  adquieren los conocimientos técnicos para  el  acceso  a  cualquier  Ciclo  Formativo relacionado con la  Tecnología  o Grado Universitario de Ingeniería o Arquitectura. ", R.drawable.bach_ciencias));
             cursos.add(new Cursos("Bachillerato en Humanidades y Ciencias sociales", "El Bachillerato es un programa de formación básica de carácter inicial en áreas disciplinares fundamentales de la Ciencias  Sociales. Entrega un repertorio de conocimientos necesarios para formar un ciudadano crítico, con un marco cultural que  le permita  enfrentar un mundo cada vez más complejo, y orienta vocacionalmente al estudiante para continuar estudios conducentes a grado académico de licenciado y/o título profesional. ", R.drawable.bach_sociales));
