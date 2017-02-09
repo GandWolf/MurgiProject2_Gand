@@ -1,7 +1,6 @@
 package murgiproject.www.iesmurgi.org.murgiprojectv2;
 
 import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +9,6 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class VerCursos extends AppCompatActivity {
-    FloatingActionButton fab_atras;
     VerCursosAdapter adapter;
     ListView listView;
     ArrayList<Cursos> cursos;
@@ -20,7 +18,6 @@ public class VerCursos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-
 
 
         //Posicion de la Categoria Cursos
@@ -66,17 +63,11 @@ public class VerCursos extends AppCompatActivity {
             cursos.add(new Cursos("Pagina Web EOI", "www.eoielejido.es", R.drawable.web_idiomas));
         }
 
-
-
         adapter = new VerCursosAdapter(this, cursos);
         listView = (ListView) findViewById(R.id.mListView);
         listView.setAdapter(adapter);
 
-
-
-
     }
-
 
     public void atras(View v){
         Intent actividadCursos = new Intent(VerCursos.this, MainActivity.class);
