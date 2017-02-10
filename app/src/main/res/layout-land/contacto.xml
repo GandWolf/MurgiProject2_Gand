@@ -208,6 +208,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="30dp"
+                        android:autoLink="email"
                         android:text="@string/email_escrito"
                         android:textColor="@color/negro"
                         android:textSize="20sp" />
@@ -250,6 +251,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
                     android:text="@string/Luis_email"
+                    android:autoLink="email"
                     android:textColor="@color/colorSubtitulo"
                     android:textSize="20sp"
 
@@ -270,6 +272,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
+                    android:autoLink="email"
                     android:text="@string/chema_email"
                     android:textColor="@color/colorSubtitulo"
                     android:textSize="20sp" />
@@ -289,6 +292,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
+                    android:autoLink="email"
                     android:text="@string/Juanjo_email"
                     android:textColor="@color/colorSubtitulo"
                     android:textSize="20sp"
@@ -309,6 +313,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
                     android:layout_marginStart="40dp"
+                    android:autoLink="email"
                     android:text="@string/Miguel_email"
                     android:textColor="@color/colorSubtitulo"
                     android:textSize="20sp" />
