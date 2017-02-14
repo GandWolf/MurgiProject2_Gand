@@ -9,7 +9,8 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class VerCursos extends AppCompatActivity {
-
+    VerCursosAdapter adapter;
+    ListView listView;
     ArrayList<Cursos> cursos;
     int pos=0;
 
@@ -63,11 +64,14 @@ public class VerCursos extends AppCompatActivity {
             cursos.add(new Cursos("Pagina Web EOI", "www.eoielejido.es", R.drawable.web_idiomas));
         }
 
-
+        adapter = new VerCursosAdapter(this, cursos);
+        listView = (ListView) findViewById(R.id.mListView);
+        listView.setAdapter(adapter);
 
     }
 
     public void atras(View v){
-        //fab para ir  a inicio
+        Intent actividadCursos = new Intent(VerCursos.this, MainActivity.class);
+        startActivity(actividadCursos);
     }
 }

@@ -30,7 +30,6 @@ public class Cursos {
         this.descripcion = descripcion;
     }
 
-
     public int getImagen() {
         return imagen;
     }
