@@ -51,7 +51,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_citas);
 
-        asunto="";
+        asunto = "";
         dateButton = (ImageView) findViewById(R.id.btn_calendar);
         timeButton = (ImageView) findViewById(R.id.btn_reloj);
         edt_fecha = (TextView) findViewById(R.id.edt_fecha);
@@ -64,7 +64,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         final TextView cabecera = (TextView) findViewById(R.id.cabecera);
 
-        compruebaInternet ();
+        compruebaInternet();
 
         cabecera.setVisibility(View.INVISIBLE);
 
@@ -121,7 +121,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         dateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                compruebaInternet ();
+                compruebaInternet();
                 Calendar now = Calendar.getInstance();
                 DatePickerDialog dpd = DatePickerDialog.newInstance(
                         Citas.this,
@@ -138,7 +138,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         timeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                compruebaInternet ();
+                compruebaInternet();
                 Calendar now1 = Calendar.getInstance();
                 TimePickerDialog tpd = TimePickerDialog.newInstance(
                         Citas.this,
@@ -152,29 +152,14 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
                 tpd.enableSeconds(false);
 
                 tpd.setTimeInterval(1, 10, 60);
-                tpd.setMinTime(9,0,0);
-                tpd.setMaxTime(14,0,0);
+                tpd.setMinTime(9, 0, 0);
+                tpd.setMaxTime(14, 0, 0);
 
 
                 tpd.show(getFragmentManager(), "Timepickerdialog");
             }
         });
 
-
-        enviar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if(nombre.getText().toString().isEmpty() || apellidos.getText().toString().isEmpty() || edt_fecha.getText().toString().isEmpty() || edt_hora.getText().toString().isEmpty() || asunto.equals("")){
-                    Snackbar.make(findViewById(android.R.id.content), "¡¡¡Error!!! Inserte todos los datos", Snackbar.LENGTH_SHORT).show();
-
-                }else{
-                    dialogoEnviar();
-                }
-
-
-            }
-        });
 
         cancelar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -183,52 +168,20 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
             }
         });
 
-    }//fin onCreate
+        enviar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (nombre.getText().toString().isEmpty() || apellidos.getText().toString().isEmpty() || edt_fecha.getText().toString().isEmpty() || edt_hora.getText().toString().isEmpty() || asunto.equals("")) {
+                    Snackbar.make(findViewById(android.R.id.content), "¡¡¡Error!!! Inserte todos los datos", Snackbar.LENGTH_SHORT).show();
+
+                } else {
+                dialogoEnviar();
+                }
 
 
-    @Override
-    public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
-        Date fec=null;
-        String date = "Fecha seleccionada: " + dayOfMonth + "/" + (monthOfYear + 1) + "/" + year;
-        edt_fecha.setText(date);
-        @SuppressLint("SimpleDateFormat") SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
-        String dat = year +"-"+(monthOfYear + 1) + "-"  +dayOfMonth;
-        try {
-            fec=dt.parse(dat);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        fecha=dt.format(fec);
-        comprobarCita();
-
-    }
-
-
-    @Override
-    public void onTimeSet(TimePickerDialog view, int hourOfDay, int minute, int second) {
-        Date hor=null;
-        String time = "Hora seleccionada: " + hourOfDay + "h" + minute + "min";
-        edt_hora.setText(time);
-        String h = hourOfDay + ":" + minute + ":" + second;
-        @SuppressLint("SimpleDateFormat") SimpleDateFormat dt = new SimpleDateFormat("hh:mm:ss");
-        try {
-            hor=dt.parse(h);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        hora=dt.format(hor);
-        comprobarCita();
-
-    }
-
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        DatePickerDialog dpd = (DatePickerDialog) getFragmentManager().findFragmentByTag("Datepickerdialog");
-        if (dpd != null) dpd.setOnDateSetListener(this);
-        TimePickerDialog tpd = (TimePickerDialog) getFragmentManager().findFragmentByTag("Timepickerdialog");
-        if (tpd != null) tpd.setOnTimeSetListener(this);
+            }
+        });
     }
 
     public void dialogoEnviar() {
@@ -261,6 +214,52 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
         AlertDialog dialog = builder.create();
         dialog.show();
     }
+
+    @Override
+    public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
+        Date fec=null;
+        String date = "Fecha seleccionada: " + dayOfMonth + "/" + (monthOfYear + 1) + "/" + year;
+        edt_fecha.setText(date);
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
+        String dat = year +"-"+(monthOfYear + 1) + "-"  +dayOfMonth;
+        try {
+            fec=dt.parse(dat);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        fecha=dt.format(fec);
+
+
+    }
+
+
+    @Override
+    public void onTimeSet(TimePickerDialog view, int hourOfDay, int minute, int second) {
+        Date hor=null;
+        String time = "Hora seleccionada: " + hourOfDay + "h" + minute + "min";
+        edt_hora.setText(time);
+        String h = hourOfDay + ":" + minute + ":" + second;
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat dt = new SimpleDateFormat("hh:mm:ss");
+        try {
+            hor=dt.parse(h);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        hora=dt.format(hor);
+
+
+    }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        DatePickerDialog dpd = (DatePickerDialog) getFragmentManager().findFragmentByTag("Datepickerdialog");
+        if (dpd != null) dpd.setOnDateSetListener(this);
+        TimePickerDialog tpd = (TimePickerDialog) getFragmentManager().findFragmentByTag("Timepickerdialog");
+        if (tpd != null) tpd.setOnTimeSetListener(this);
+    }
+
 
 
     public void dialogoCancelar() {
@@ -306,17 +305,7 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
     }
 
 
-    public void comprobarCita(){
-        new ConexionBD(Citas.this).execute();
-        for (int i=0 ; i<datosFecha.size();i++){
-            if (datosHora.get(i).equals(hora) && datosFecha.get(i).equals(fecha)){
-                Snackbar.make(findViewById(android.R.id.content), "¡¡¡Error!!! Seleccione otra cita", Snackbar.LENGTH_LONG).show();
-                enviar.setEnabled(false);
-            }
 
-        }
-
-    }
 
 
 }

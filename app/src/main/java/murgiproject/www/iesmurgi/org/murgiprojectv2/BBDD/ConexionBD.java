@@ -34,8 +34,9 @@ public class ConexionBD extends AsyncTask<String, Void, ResultSet> {
                 }else{
                     datosHora.clear();
                     datosFecha.clear();
+                   //consulta hora y fecha y almacenar en arraylist datosHora y datosFecha
                     while(result.next()){
-                        datosHora.add( result.getString(1));
+                        datosHora.add(result.getString(1));
                         datosFecha.add(result.getString(2));
                     }
                 }

@@ -23,11 +23,8 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout curso = (LinearLayout) findViewById(R.id.boton_cursos);
         LinearLayout citas = (LinearLayout) findViewById(R.id.boton_cita);
 
-        //Llamamos a la fuente no incluida en Android
-        TextView titulo_splash = (TextView) findViewById(R.id.textoInicio);
-        Typeface face = Typeface.createFromAsset(getAssets(), "font/letra.TTF");
-        titulo_splash.setTypeface(face);
-
+        Typeface letra = Typeface.createFromAsset(getAssets(), "font/letra.TTF");
+        ((TextView) findViewById(R.id.textoInicio)).setTypeface(letra);
 
         iesmurgi.setOnClickListener(new View.OnClickListener() {
             @Override

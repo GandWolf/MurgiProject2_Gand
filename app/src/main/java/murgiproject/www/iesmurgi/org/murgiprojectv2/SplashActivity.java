@@ -24,8 +24,7 @@ public class SplashActivity extends AppCompatActivity {
             }
         }, SPLASH_TIME_OUT); //Tras la duración definida, irá desde esta clase "MainActivity" hacia la clase "MainActivity", definido a través del Intent
 
-        TextView titulo_splash= (TextView)findViewById(R.id.textView_titulo_splash);
-        Typeface face= Typeface.createFromAsset(getAssets(),"font/letra.TTF"); //Llamamos a la fuente no incluida en Android
-        titulo_splash.setTypeface(face);
+        Typeface letra = Typeface.createFromAsset(getAssets(), "font/letra.TTF");
+        ((TextView) findViewById(R.id.textView_titulo_splash)).setTypeface(letra);
     }
 }

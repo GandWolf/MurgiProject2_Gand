@@ -57,9 +57,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         }
 
+//        añadir latitud y longitud
         LatLng iesmurgi = new LatLng(36.7817215, -2.815615);
         mMap.addMarker(new MarkerOptions().position(iesmurgi).title("IES Murgi"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(iesmurgi, 17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(iesmurgi, 18));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(iesmurgi));
     }
 

@@ -12,9 +12,6 @@ public class Contacto extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.contacto);
 
-        Typeface letramurgi = Typeface.createFromAsset(getAssets(), "font/letra.TTF");
-
-        TextView murgi = (TextView) findViewById(R.id.txt_murgi);
-        murgi.setTypeface(letramurgi);
+      //añadir fuente externa
     }
 }
